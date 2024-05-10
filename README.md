@@ -1,3 +1,3 @@
-# tylerpalko.github.io
+# tinosgames.github.io
 
-This is just a simple front page.
+My Front Page
