@@ -1,5 +1,5 @@
 html {
-  background-color: #202124;
+  background-color: #000000;
   color: #ffffff;
   font-family: Inter sans-serif;
   }
@@ -16,17 +16,17 @@ html {
     text-align: center;
   }
   a:link {
-    color: #8ab4f8;
+    color: #ffffff;
     background-color: transparent;
     text-decoration: none;
   }
   a:visited {
-    color: #c58af9;
+    color: #ffffff;
     background-color: transparent;
     text-decoration: none;
   }
   a:hover {
-    color: #c58af9;
+    color: #ffffff;
     background-color: transparent;
     text-decoration: underline;
   }
