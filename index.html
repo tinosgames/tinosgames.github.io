@@ -23,6 +23,25 @@
         .game-links {
             text-align: center;
         }
+
+        /* Style for the home page button */
+        .home-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 20px; /* Add margin to separate from game links */
+            cursor: pointer;
+        }
+
+        .home-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +49,9 @@
 <div class="heading">
     <h1>Tino's Game Hub</h1>
 </div>
+
+<!-- Home page button -->
+<a class="home-button" href="home.html">Home Page</a>
 
 <!-- Wrap game links in a container -->
 <div class="game-links">
@@ -39,7 +61,7 @@
     <br><br>
     <a href="chromedino">Chrome Dino</a>
     <br><br>
-    <a href="cookieclicker">Cookie Clicker</a>
+   <a href="cookieclicker">Cookie Clicker</a>
     <br><br>
     <a href="flappybird">Flappy Bird</a>
     <br><br>
@@ -63,7 +85,7 @@
     <br><br>
 </div>
 
-    <footer>
+<footer>
     <div class="footer">
         <p>(More Games Soon!)</p>
         <a href="https://tinosgames.github.io/tinogames.github.io/">Source Code</a>
