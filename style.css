@@ -1,32 +1,31 @@
 html {
-  background-color: #000000;
-  color: #ffffff;
-  font-family: Inter sans-serif;
-  }
-  .heading {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Luckiest Guy', cursive; /* Change font-family to 'Luckiest Guy' */
+}
+
+.heading {
     text-align: center;
     position: fixed;
     width: 100%;
-              }
-  .footer {
+}
+
+.footer {
     position: fixed;
     left: 0;
-    bottom:0;
+    bottom: 0;
     width: 100%;
     text-align: center;
-  }
-  a:link {
+}
+
+a:link,
+a:visited,
+a:hover {
     color: #ffffff;
     background-color: transparent;
     text-decoration: none;
-  }
-  a:visited {
-    color: #ffffff;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #ffffff;
-    background-color: transparent;
+}
+
+a:hover {
     text-decoration: underline;
-  }
+}
