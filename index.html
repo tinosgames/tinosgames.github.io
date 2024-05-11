@@ -41,9 +41,7 @@
 
         /* Style for the button */
         .button {
-            position: absolute; /* Position the button absolutely */
-            top: 20px; /* Adjust top position */
-            left: 20px; /* Adjust left position */
+            position: relative; /* Position the button relatively */
             background-color: #4CAF50;
             border: none;
             color: white;
@@ -52,8 +50,12 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin-bottom: 20px; /* Add margin to separate from other content */
+            margin: 20px 0; /* Add margin to separate from other content */
             cursor: pointer;
+        }
+
+        .button-left {
+            left: 20px; /* Adjust left position */
         }
 
         .button:hover {
@@ -68,7 +70,7 @@
 </div>
 
 <!-- Button to navigate to the home.html page -->
-<a class="button" href="home.html">Home Page</a>
+<a class="button button-left" href="home.html">Home Page</a>
 
 <!-- Wrap game links in a container -->
 <div class="game-links">
