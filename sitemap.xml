@@ -90,7 +90,22 @@
   <priority>0.80</priority>
 </url>
 <url> 
- <loc>https://monkeygg2.github.io/games/brawl-stars-project-laser/</loc>
+  <loc>https://monkeygg2.github.io/games/brawl-stars-project-laser/</loc>
+  <lastmod>2023-04-27T21:48:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monkeygg2.github.io/games/drive-mad/</loc>
+  <lastmod>2023-04-27T21:48:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monkeygg2.github.io/games/doodle-jump/</loc>
+  <lastmod>2023-04-27T21:48:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monkeygg2.github.io/games/run-3/</loc>
   <lastmod>2023-04-27T21:48:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
