@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* CSS styles for the game links */
+        /* CSS styles for the index.html page */
         body {
             background-color: #000000; /* Black background */
             color: #ffffff; /* White text color */
@@ -20,12 +20,26 @@
             padding-top: 100px; /* Add padding to center content */
         }
 
-        .game-links {
-            text-align: center;
+        /* Style for the heading */
+        .heading {
+            position: fixed; /* Fix heading position */
+            top: 0; /* Align heading to the top */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            width: 100%; /* Make heading full width */
+            background-color: #000000; /* Black background */
+            padding: 20px 0; /* Add padding top and bottom */
+            z-index: 1000; /* Ensure heading stays on top of other content */
         }
 
-        /* Style for the home page button */
-        .home-button {
+        /* Style for the game links */
+        .game-links {
+            text-align: center;
+            margin-top: 150px; /* Add margin to separate from heading */
+        }
+
+        /* Style for the buttons */
+        .button {
             display: inline-block;
             background-color: #4CAF50;
             border: none;
@@ -35,11 +49,11 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin-bottom: 20px; /* Add margin to separate from game links */
+            margin-bottom: 20px; /* Add margin to separate from other content */
             cursor: pointer;
         }
 
-        .home-button:hover {
+        .button:hover {
             background-color: #45a049;
         }
     </style>
@@ -50,8 +64,8 @@
     <h1>Tino's Game Hub</h1>
 </div>
 
-<!-- Home page button -->
-<a class="home-button" href="home.html">Home Page</a>
+<!-- Button to navigate to the home.html page -->
+<a class="button" href="home.html">Home Page</a>
 
 <!-- Wrap game links in a container -->
 <div class="game-links">
@@ -61,28 +75,7 @@
     <br><br>
     <a href="chromedino">Chrome Dino</a>
     <br><br>
-   <a href="cookieclicker">Cookie Clicker</a>
-    <br><br>
-    <a href="flappybird">Flappy Bird</a>
-    <br><br>
-    <a href="geometrydash">Geometry Dash</a>
-    <br><br>
-    <a href="motox3m2">Moto X3M 2</a>
-    <br><br>
-    <a href="pacman">Pac-Man</a>
-    <br><br>
-    <a href="retrobowl">Retro Bowl</a>
-    <br><br>
-    <a href="slope">Slope</a>
-    <br><br>
-    <a href="snake">Snake</a>
-    <br><br>
-    <a href="soccerrandom">Soccer Random</a>
-    <br><br>
-    <a href="tunnelrush">Tunnel Rush</a>
-    <br><br>
-    <a href="volleyrandom">Volley Random</a>
-    <br><br>
+    <!-- Add more game links here -->
 </div>
 
 <footer>
