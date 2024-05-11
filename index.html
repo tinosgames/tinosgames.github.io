@@ -9,17 +9,52 @@
     <title>Tino's Game Hub</title>
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* CSS styles for the navigation bar */
+        .navbar {
+            background-color: #333; /* Background color of the navigation bar */
+            overflow: hidden;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline;
+        }
+
+        .navbar a {
+            display: block;
+            color: white; /* Text color of the navigation links */
+            text-decoration: none;
+            padding: 14px 16px; /* Padding around each navigation link */
+        }
+
+        .navbar a:hover {
+            background-color: #555; /* Background color of the navigation links on hover */
+        }
+    </style>
 </head>
 <body>
 
-<iframe src="navbar.html" width="100%" height="50px" frameborder="0"></iframe>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <!-- Add more navigation links here -->
+    </ul>
+</nav>
 
 <div class="heading">
     <h1>Tino's Game Hub</h1>
 </div>
 
 <div>
-    <a href="1v1.lol">1v1.LOL</a>
+   <a href="1v1.lol">1v1.LOL</a>
     <br><br>
     <a href="boxingrandom">Boxing Random</a>
     <br><br>
@@ -48,10 +83,10 @@
     <a href="volleyrandom">Volley Random</a>
     <br><br>
 </div>
-<p>(More Games Soon!)</p>
 
 <footer>
     <div class="footer">
+        <p>(More Games Soon!)</p>
         <a href="https://tinosgames.github.io/tinogames.github.io/">Source Code</a>
     </div>
 </footer>
