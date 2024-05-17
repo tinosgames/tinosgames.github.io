@@ -18,6 +18,7 @@ body {
     background-color: #000000; /* Black background */
     padding: 20px 0; /* Add padding top and bottom */
     z-index: 1000; /* Ensure heading stays on top of other content */
+    font-family: 'Luckiest Guy', cursive; /* Apply 'Luckiest Guy' font */
 }
 
 /* Style for the game links */
