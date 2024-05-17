@@ -2,7 +2,7 @@
 body {
     background-color: #000000; /* Black background */
     color: #ffffff; /* White text color */
-    font-family: 'Luckiest Guy', cursive; /* 'Luckiest Guy' font */
+    font-family: 'Luckiest Guy' /* 'Luckiest Guy' font */
     text-align: center; /* Center align text */
     padding-top: 100px; /* Add padding to center content */
     position: relative; /* Set body to relative positioning */
