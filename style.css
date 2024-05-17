@@ -18,17 +18,21 @@ body {
     background-color: #000000; /* Black background */
     padding: 20px 0; /* Add padding top and bottom */
     z-index: 1000; /* Ensure heading stays on top of other content */
-    font-family: 'Luckiest Guy', cursive; /* Apply 'Luckiest Guy' font */
 }
 
 /* Style for the game links */
 .game-links {
-    text-align: center;
+    display: grid; /* Use grid layout for the links */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    grid-gap: 20px; /* Gap between grid items */
+    justify-content: center; /* Center align grid items */
     margin-top: 50px; /* Adjust margin to bring links up slightly */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-    justify-items: center;
+}
+
+/* Style for game images */
+.game-links img {
+    max-width: 100%; /* Set maximum width for images */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Style for the button */
