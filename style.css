@@ -2,7 +2,7 @@
 body {
     background-color: #000000; /* Black background */
     color: #ffffff; /* White text color */
-    font-family: 'Luckiest Guy' /* 'Luckiest Guy' font */
+    font-family: 'Luckiest Guy', cursive; /* 'Luckiest Guy' font */
     text-align: center; /* Center align text */
     padding-top: 100px; /* Add padding to center content */
     position: relative; /* Set body to relative positioning */
@@ -18,6 +18,16 @@ body {
     background-color: #000000; /* Black background */
     padding: 20px 0; /* Add padding top and bottom */
     z-index: 1000; /* Ensure heading stays on top of other content */
+}
+
+/* Style for the game links */
+.game-links {
+    text-align: center;
+    margin-top: 50px; /* Adjust margin to bring links up slightly */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
 }
 
 /* Style for the button */
@@ -36,26 +46,4 @@ body {
 
 .button:hover {
     background-color: #45a049;
-}
-
-/* Style for the game links */
-.game-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    margin: 50px auto; /* Adjust margin to bring links up slightly */
-    width: 80%; /* Adjust the width of the grid container */
-}
-
-.game-links a {
-    display: block;
-    text-align: center;
-}
-
-.game-links img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px; /* Add rounded corners if desired */
 }
