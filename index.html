@@ -9,6 +9,58 @@
     <title>Tino's Game Hub</title>
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* CSS styles for the index.html page */
+        body {
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text color */
+            font-family: 'Luckiest Guy', cursive; /* 'Luckiest Guy' font */
+            text-align: center; /* Center align text */
+            padding-top: 100px; /* Add padding to center content */
+            position: relative; /* Set body to relative positioning */
+        }
+
+        /* Style for the heading */
+        .heading {
+            position: fixed; /* Fix heading position */
+            top: 0; /* Align heading to the top */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            width: 100%; /* Make heading full width */
+            background-color: #000000; /* Black background */
+            padding: 20px 0; /* Add padding top and bottom */
+            z-index: 1000; /* Ensure heading stays on top of other content */
+        }
+
+        /* Style for the game links */
+        .game-links {
+            text-align: center;
+            margin-top: 50px; /* Adjust margin to bring links up slightly */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+            justify-items: center;
+        }
+
+        /* Style for the button */
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px auto; /* Center button horizontally */
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,11 +74,11 @@
 <!-- Wrap game links in a container -->
 <div class="game-links">
     <a href="1v1.lol">
-        <img src="1v1_lol_image.jpg" alt="1v1.LOL">
+        <img src="images/1v1_lol_image.jpg" alt="1v1.LOL">
     </a>
     <a href="basket-random">
-        <img src="basket_random_image.jpg" alt="Basket Random">
-    </a>
+        <img src="images/basket_random_image.jpg" alt="Basket Random">
+     </a>
     <a href="bitlife">
         <img src="bit_life_image.jpg" alt="BitLife">
     </a>
@@ -81,9 +133,8 @@
     <a href="volleyrandom">
         <img src="images/volley_random_image.jpg" alt="Volley Random">
     </a>
-    <!-- Add more game links with images as needed -->
+    <!-- Repeat for other images -->
 </div>
 
 </body>
 </html>
- 
