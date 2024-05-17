@@ -20,21 +20,6 @@ body {
     z-index: 1000; /* Ensure heading stays on top of other content */
 }
 
-/* Style for the game links */
-.game-links {
-    display: grid; /* Use grid layout for the links */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
-    grid-gap: 20px; /* Gap between grid items */
-    justify-content: center; /* Center align grid items */
-    margin-top: 50px; /* Adjust margin to bring links up slightly */
-}
-
-/* Style for game images */
-.game-links img {
-    max-width: 100%; /* Set maximum width for images */
-    height: auto; /* Maintain aspect ratio */
-}
-
 /* Style for the button */
 .button {
     background-color: #4CAF50;
@@ -51,4 +36,19 @@ body {
 
 .button:hover {
     background-color: #45a049;
+}
+
+/* Style for the game links */
+.game-links {
+    display: grid; /* Use grid layout for the links */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    grid-gap: 20px; /* Gap between grid items */
+    justify-content: center; /* Center align grid items */
+    margin-top: 50px; /* Adjust margin to bring links up slightly */
+}
+
+/* Style for game images */
+.game-links img {
+    max-width: 100%; /* Set maximum width for images */
+    height: auto; /* Maintain aspect ratio */
 }
