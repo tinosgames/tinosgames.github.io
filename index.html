@@ -33,12 +33,6 @@
             z-index: 1000; /* Ensure heading stays on top of other content */
         }
 
-        /* Style for the game links */
-        .game-links {
-            text-align: center;
-            margin-top: 50px; /* Adjust margin to bring links up slightly */
-        }
-
         /* Style for the button */
         .button {
             background-color: #4CAF50;
@@ -56,6 +50,28 @@
         .button:hover {
             background-color: #45a049;
         }
+
+        /* Style for the game links */
+        .game-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 50px auto; /* Adjust margin to bring links up slightly */
+            width: 80%; /* Adjust the width of the grid container */
+        }
+
+        .game-links a {
+            display: block;
+            text-align: center;
+        }
+
+        .game-links img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px; /* Add rounded corners if desired */
+        }
     </style>
 </head>
 <body>
@@ -70,88 +86,67 @@
 <!-- Wrap game links in a container -->
 <div class="game-links">
     <a href="1v1.lol">
-        <img src="1v1_lol_image.jpg" alt="1v1.LOL">
+        <img src="images/1v1_lol_image.jpg" alt="1v1.LOL">
     </a>
-    <br><br>
     <a href="basket-random">
-        <img src="basket_random_image.jpg" alt="Basket Random">
+        <img src="images/basket_random_image.jpg" alt="Basket Random">
     </a>
-     <br><br>
     <a href="bitlife">
-        <img src="bit_life_image.jpg" alt="BitLife">
+        <img src="images/bit_life_image.jpg" alt="BitLife">
     </a>
-     <br><br>
     <a href="boxingrandom">
-        <img src="boxing_random_image.jpg" alt="Boxing Random">
+        <img src="images/boxing_random_image.jpg" alt="Boxing Random">
     </a>
-     <br><br>
     <a href="brawl-stars-project-laser">
-        <img src="brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser">
+        <img src="images/brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser">
     </a>
-     <br><br>
     <a href="chromedino">
-        <img src="chrome_dino_image.jpg" alt="Chrome Dino">
+        <img src="images/chrome_dino_image.jpg" alt="Chrome Dino">
     </a>
-     <br><br>
     <a href="cookieclicker">
-        <img src="cookie_clicker_image.jpg" alt="Cookie Clicker">
+        <img src="images/cookie_clicker_image.jpg" alt="Cookie Clicker">
     </a>
-     <br><br>
     <a href="doodle_jump">
-        <img src="doodle_jump_image.jpg" alt="Doodle Jump">
+        <img src="images/doodle_jump_image.jpg" alt="Doodle Jump">
     </a>
-     <br><br>
     <a href="drive-mad">
-        <img src="drive_mad_image.jpg" alt="=Drive Mad">
+        <img src="images/drive_mad_image.jpg" alt="Drive Mad">
     </a>
-     <br><br>
     <a href="flappybird">
-        <img src="flappy_bird_image.jpg" alt="Flappy Bird">
+        <img src="images/flappy_bird_image.jpg" alt="Flappy Bird">
     </a>
-     <br><br>
     <a href="geometrydash">
-        <img src="geometry_dash_image.jpg" alt="Geometry Dash">
+        <img src="images/geometry_dash_image.jpg" alt="Geometry Dash">
     </a>
-     <br><br>
     <a href="pacman">
-        <img src="pac_man_image.jpg" alt="Pac-Man">
+        <img src="images/pac_man_image.jpg" alt="Pac-Man">
     </a>
-     <br><br>
     <a href="retrobowl">
-        <img src="retro_bowl_image.jpg" alt="Retro Bowl">
+        <img src="images/retro_bowl_image.jpg" alt="Retro Bowl">
     </a>
-     <br><br>
     <a href="run-3">
-        <img src="run_3_image.jpg" alt="Run3">
+        <img src="images/run_3_image.jpg" alt="Run 3">
     </a>
-     <br><br>
     <a href="slope">
-        <img src="slope_image.jpg" alt="Slope">
+        <img src="images/slope_image.jpg" alt="Slope">
     </a>
-     <br><br>
     <a href="snake">
-        <img src="snake_image.jpg" alt="Snake">
+        <img src="images/snake_image.jpg" alt="Snake">
     </a>
-     <br><br>
     <a href="snowrider3d">
-        <img src="snow_rider_3d_image.jpg" alt="Snow Rider 3D">
+        <img src="images/snow_rider_3d_image.jpg" alt="Snow Rider 3D">
     </a>
-     <br><br>
     <a href="subway-surfers">
-        <img src="subway_surfers_image.jpg" alt="Subway Surfers">
+        <img src="images/subway_surfers_image.jpg" alt="Subway Surfers">
     </a>
-     <br><br>
     <a href="tunnelrush">
-        <img src="tunnel_rush_image.jpg" alt="Tunnel Rush">
+        <img src="images/tunnel_rush_image.jpg" alt="Tunnel Rush">
     </a>
-     <br><br>
     <a href="volleyrandom">
-        <img src="volley_random_image.jpg" alt="Volley Random">
+        <img src="images/volley_random_image.jpg" alt="Volley Random">
     </a>
     <!-- Add more game links with images as needed -->
 </div>
-
-
 
 </body>
 </html>
