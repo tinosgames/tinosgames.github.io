@@ -1,6 +1,10 @@
 /* CSS styles for the index.html page */
 body {
-    background-color: #000000; /* Black background */
+    background-color: #000000; /* Fallback color */
+    background-image: url('background.jpg'); /* Path to the background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
     color: #ffffff; /* White text color */
     font-family: 'Luckiest Guy', cursive; /* 'Luckiest Guy' font */
     text-align: center; /* Center align text */
@@ -41,7 +45,7 @@ body {
 /* Style for the game links */
 .game-links {
     display: grid; /* Use grid layout for the links */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
     grid-gap: 20px; /* Gap between grid items */
     justify-content: center; /* Center align grid items */
     margin-top: 50px; /* Adjust margin to bring links up slightly */
@@ -53,4 +57,13 @@ body {
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Add border radius for rounded corners */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+}
+
+/* Style for the game content iframe */
+#game-content {
+    width: 100%;
+    height: 600px;
+    border: none;
+    margin-top: 20px;
+    display: none; /* Hidden by default */
 }
