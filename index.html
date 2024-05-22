@@ -13,7 +13,11 @@
     <style>
         /* CSS styles for the index.html page */
         body {
-            background-color: #000000; /* Black background */
+            background-color: #000000; /* Fallback color */
+            background-image: url('background.jpg'); /* Path to the background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the background image */
             color: #ffffff; /* White text color */
             font-family: 'Luckiest Guy', cursive; /* 'Luckiest Guy' font */
             text-align: center; /* Center align text */
@@ -39,27 +43,6 @@
             top: -100px; /* Move heading out of view */
         }
 
-        /* Style for the game links */
-        .game-links {
-            text-align: center;
-            margin-top: 150px; /* Adjust margin to avoid overlapping with heading */
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
-            grid-gap: 20px;
-            justify-items: center;
-        }
-
-        /* Style for game images */
-        .game-links img {
-            max-width: 100%; /* Set maximum width for images */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px; /* Add border radius for rounded corners */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
-            object-fit: cover; /* Ensure images cover the space nicely */
-            width: 150px; /* Adjust width as needed */
-            height: 150px; /* Adjust height as needed */
-        }
-
         /* Style for the button */
         .button {
             background-color: #4CAF50;
@@ -77,105 +60,114 @@
         .button:hover {
             background-color: #45a049;
         }
+
+        /* Style for the game links */
+        .game-links {
+            display: grid; /* Use grid layout for the links */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
+            grid-gap: 20px; /* Gap between grid items */
+            justify-content: center; /* Center align grid items */
+            margin-top: 50px; /* Adjust margin to bring links up slightly */
+        }
+
+        /* Style for game images */
+        .game-links img {
+            max-width: 100%; /* Set maximum width for images */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+        }
+
+        /* Style for the game content iframe */
+        #game-content {
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin-top: 20px;
+            display: none; /* Hidden by default */
+        }
     </style>
 </head>
 <body>
 
 <div class="heading">
-    <h1>InterstellarX</h1>
+    <h1>InterstellarX</h1>   
 </div>
 
- <!-- Button to navigate to the home.html page -->
+<!-- Button to navigate to the home.html page -->
 <a class="button" href="home.html">Home Page</a>
-    
 
 <!-- Wrap game links in a container -->
 <div class="game-links">
     <a href="1v1.lol">
-        <img src="images/1v1_lol_image.jpg" alt="1v1.LOL">
+        <img src="1v1_lol_image.jpg" alt="1v1.LOL">
     </a>
     <a href="basketrandom">
-        <img src="images/basket_random_image.jpg" alt="Basket Random">
+        <img src="basket_random_image.jpg" alt="Basket Random">
     </a>
     <a href="bitlife">
-        <img src="images/bit_life_image.jpg" alt="BitLife">
+        <img src="bit_life_image.jpg" alt="BitLife">
     </a>
     <a href="boxingrandom">
-        <img src="images/boxing_random_image.jpg" alt="Boxing Random">
+        <img src="boxing_random_image.jpg" alt="Boxing Random">
     </a>
     <a href="brawl-stars-project-laser">
-        <img src="images/brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser">
+        <img src="brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser">
     </a>
     <a href="chromedino">
-        <img src="images/chrome_dino_image.jpg" alt="Chrome Dino">
-    </a>
-    <a href="cookieclicker">
-        <img src="images/cookie_clicker_image.jpg" alt="Cookie Clicker">
-    </a>
-    <a href="crossy-road">
-        <img src="images/crossy_road_image.jpg" alt="Crossy Road">
+        <img src="chrome_dino_image.jpg" alt="Chrome Dino">
     </a>
     <a href="drive-mad">
-        <img src="images/drive_mad_image.jpg" alt="Drive Mad">
-    </a>
-    <a href="eaglercraft">
-        <img src="images/eaglercraft_image.jpg" alt="Minecraft">
-    </a>
-    <a href="eggycar">
-        <img src="images/eggycar_image.jpg" alt="Eggy Car">
+        <img src="drive_mad_image.jpg" alt="Drive Mad">
     </a>
     <a href="flappybird">
-        <img src="images/flappy_bird_image.jpg" alt="Flappy Bird">
+        <img src="flappy_bird_image.jpg" alt="Flappy Bird">
     </a>
     <a href="geometrydash">
-        <img src="images/geometry_dash_image.jpg" alt="Geometry Dash">
+        <img src="geometry_dash_image.jpg" alt="Geometry Dash">
     </a>
     <a href="motox3m2">
-        <img src="images/moto_x3m_2_image.jpg" alt="Moto X3M 2">
+        <img src="moto_x3m_2_image.jpg" alt="Moto X3M 2">
     </a>
     <a href="pacman">
-        <img src="images/pac_man_image.jpg" alt="Pac-Man">
+        <img src="pac_man_image.jpg" alt="Pac-Man">
     </a>
     <a href="retrobowl">
-        <img src="images/retro_bowl_image.jpg" alt="Retro Bowl">
+        <img src="retro_bowl_image.jpg" alt="Retro Bowl">
     </a>
-    <a href="slope">
-        <img src="images/slope_image.jpg" alt="Slope">
+    <a href="snake">
+        <img src="snake_image.jpg" alt="Snake">
     </a>
     <a href="snowrider3d">
-        <img src="images/snow_rider_3d_image.jpg" alt="Snow Rider 3D">
+        <img src="snow_rider_3d_image.jpg" alt="Snow Rider 3D">
     </a>
     <a href="subway-surfers">
-        <img src="images/subway_surfers_image.jpg" alt="Subway Surfers">
+        <img src="subway_surfers_image.jpg" alt="Subway Surfers">
     </a>
     <a href="tunnelrush">
-        <img src="images/tunnel_rush_image.jpg" alt="Tunnel Rush">
+        <img src="tunnel_rush_image.jpg" alt="Tunnel Rush">
     </a>
     <a href="volleyrandom">
-        <img src="images/volley_random_image.jpg" alt="Volley Random">
-    </a>
-    <a href="smashkarts">
-        <img src="images/smash-karts.jpg" alt="Smash Karts">
-    </a>
-    <a href="mario-game">
-        <img src="images/mario_64_image.jpg" alt="Mario Game">
-    </a>
-    <a href="2048">
-        <img src="images/2048.jpg" alt="2048">
-    </a>
-    <a href="drift-hunters">
-        <img src="images/drifthunters.jpg" alt="Drift Hunters">
+        <img src="volley_random_image.jpg" alt="Volley Random">
     </a>
 </div>
 
+<iframe id="game-content"></iframe>
+
 <script>
+    // JavaScript to hide the heading on scroll
+    let lastScrollTop = 0;
     window.addEventListener('scroll', function() {
-        var heading = document.querySelector('.heading');
-        if (window.scrollY > 50) {
+        const heading = document.querySelector('.heading');
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Scroll down
             heading.classList.add('hidden');
         } else {
+            // Scroll up
             heading.classList.remove('hidden');
         }
+        lastScrollTop = scrollTop;
     });
 </script>
 
