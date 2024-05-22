@@ -6,7 +6,7 @@
     <meta name="keywords" content="Games,Unblocked Games,Unity,WebGL,Unblocked,Google Sites,tino's game hub,tyler's unblocked games,tino's games unblocked">
     <meta name="author" content="Tino">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InterstellerX</title>
+    <title>InterstellarX</title>
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="style.css">
 
@@ -28,19 +28,36 @@
             left: 50%; /* Center horizontally */
             transform: translateX(-50%); /* Center horizontally */
             width: 100%; /* Make heading full width */
-            background-color: #000000; /* Black background */
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
             padding: 20px 0; /* Add padding top and bottom */
             z-index: 1000; /* Ensure heading stays on top of other content */
+            transition: top 0.3s; /* Smooth transition for hiding */
+        }
+
+        /* Hidden heading */
+        .heading.hidden {
+            top: -100px; /* Move heading out of view */
         }
 
         /* Style for the game links */
         .game-links {
             text-align: center;
-            margin-top: 50px; /* Adjust margin to bring links up slightly */
+            margin-top: 150px; /* Adjust margin to avoid overlapping with heading */
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
             grid-gap: 20px;
             justify-items: center;
+        }
+
+        /* Style for game images */
+        .game-links img {
+            max-width: 100%; /* Set maximum width for images */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+            object-fit: cover; /* Ensure images cover the space nicely */
+            width: 150px; /* Adjust width as needed */
+            height: 150px; /* Adjust height as needed */
         }
 
         /* Style for the button */
@@ -65,7 +82,7 @@
 <body>
 
 <div class="heading">
-    <h1>InterstellerX</h1>   
+    <h1>InterstellarX</h1>
 </div>
 
  <!-- Button to navigate to the home.html page -->
@@ -75,81 +92,92 @@
 <!-- Wrap game links in a container -->
 <div class="game-links">
     <a href="1v1.lol">
-        <img src="1v1_lol_image.jpg" alt="1v1.LOL">
+        <img src="images/1v1_lol_image.jpg" alt="1v1.LOL">
     </a>
     <a href="basketrandom">
-        <img src="basket_random_image.jpg" alt="Basket Random">
+        <img src="images/basket_random_image.jpg" alt="Basket Random">
     </a>
     <a href="bitlife">
-        <img src="bit_life_image.jpg" alt="BitLife">
+        <img src="images/bit_life_image.jpg" alt="BitLife">
     </a>
     <a href="boxingrandom">
-        <img src="boxing_random_image.jpg" alt="Boxing Random">
+        <img src="images/boxing_random_image.jpg" alt="Boxing Random">
     </a>
     <a href="brawl-stars-project-laser">
-        <img src="brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser">
+        <img src="images/brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser">
     </a>
     <a href="chromedino">
-        <img src="chrome_dino_image.jpg" alt="Chrome Dino">
-         </a>
+        <img src="images/chrome_dino_image.jpg" alt="Chrome Dino">
+    </a>
     <a href="cookieclicker">
-        <img src="cookie_clicker_image.jpg" alt="Cookie Clicker">
+        <img src="images/cookie_clicker_image.jpg" alt="Cookie Clicker">
     </a>
     <a href="crossy-road">
-        <img src="crossy_road_image.jpg" alt="Crossy Road">
+        <img src="images/crossy_road_image.jpg" alt="Crossy Road">
     </a>
-        <a href="drive-mad">
-        <img src="drive_mad_image.jpg" alt="Drive Mad">
+    <a href="drive-mad">
+        <img src="images/drive_mad_image.jpg" alt="Drive Mad">
     </a>
-     <a href="eaglercraft">
-        <img src="eaglercraft_image.jpg" alt="Minecraft">
-     </a>
-     <a href="eggycar">
-        <img src="eggycar_image.jpg" alt="Eggy Car">
+    <a href="eaglercraft">
+        <img src="images/eaglercraft_image.jpg" alt="Minecraft">
+    </a>
+    <a href="eggycar">
+        <img src="images/eggycar_image.jpg" alt="Eggy Car">
     </a>
     <a href="flappybird">
-        <img src="flappy_bird_image.jpg" alt="Flappy Bird">
+        <img src="images/flappy_bird_image.jpg" alt="Flappy Bird">
     </a>
     <a href="geometrydash">
-        <img src="geometry_dash_image.jpg" alt="Geometry Dash">
+        <img src="images/geometry_dash_image.jpg" alt="Geometry Dash">
     </a>
     <a href="motox3m2">
-        <img src="moto_x3m_2_image.jpg" alt="Moto X3M 2">
+        <img src="images/moto_x3m_2_image.jpg" alt="Moto X3M 2">
     </a>
     <a href="pacman">
-        <img src="pac_man_image.jpg" alt="Pac-Man">
-  </a>
+        <img src="images/pac_man_image.jpg" alt="Pac-Man">
+    </a>
     <a href="retrobowl">
-        <img src="retro_bowl_image.jpg" alt="Retro Bowl">
-     </a>
+        <img src="images/retro_bowl_image.jpg" alt="Retro Bowl">
+    </a>
     <a href="slope">
-        <img src="slope_image.jpg" alt="Slope">
-     </a>
+        <img src="images/slope_image.jpg" alt="Slope">
+    </a>
     <a href="snowrider3d">
-        <img src="snow_rider_3d_image.jpg" alt="Brawl Stars Project Laser">
+        <img src="images/snow_rider_3d_image.jpg" alt="Snow Rider 3D">
     </a>
     <a href="subway-surfers">
-        <img src="subway_surfers_image.jpg" alt="Subway Surfers">
+        <img src="images/subway_surfers_image.jpg" alt="Subway Surfers">
     </a>
     <a href="tunnelrush">
-        <img src="tunnel_rush_image.jpg" alt="Tunnel Rush">
+        <img src="images/tunnel_rush_image.jpg" alt="Tunnel Rush">
     </a>
     <a href="volleyrandom">
-        <img src="volley_random_image.jpg" alt="Volley Random">
-      </a>
+        <img src="images/volley_random_image.jpg" alt="Volley Random">
+    </a>
     <a href="smashkarts">
-        <img src="smash-karts.jpg" alt="Smash Karts">
-     </a>
-      <a href="mario-game">
-        <img src="mario_64_image.jpg" alt="Mario Game">
-     </a>
-      <a href="2048">
-        <img src="2048.jpg" alt="2048">
-     </a>
-     <a href="drift-hunters">
-        <img src="drifthunters.jpg" alt="Drift Hunters">
-     </a>
+        <img src="images/smash-karts.jpg" alt="Smash Karts">
+    </a>
+    <a href="mario-game">
+        <img src="images/mario_64_image.jpg" alt="Mario Game">
+    </a>
+    <a href="2048">
+        <img src="images/2048.jpg" alt="2048">
+    </a>
+    <a href="drift-hunters">
+        <img src="images/drifthunters.jpg" alt="Drift Hunters">
+    </a>
 </div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var heading = document.querySelector('.heading');
+        if (window.scrollY > 50) {
+            heading.classList.add('hidden');
+        } else {
+            heading.classList.remove('hidden');
+        }
+    });
+</script>
 
 </body>
 </html>
