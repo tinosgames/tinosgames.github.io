@@ -13,18 +13,23 @@ body {
 }
 
 /* Style for the heading */
-.heading {
+.heading-container {
     position: fixed; /* Fix heading position */
     top: 0; /* Align heading to the top */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
     width: 100%; /* Make heading full width */
     background-color: #000000; /* Black background */
     padding: 20px 0; /* Add padding top and bottom */
     z-index: 1000; /* Ensure heading stays on top of other content */
     display: flex; /* Use flexbox to align items */
-    justify-content: space-between; /* Spread items horizontally */
+    justify-content: center; /* Center the heading text */
     align-items: center; /* Center align items vertically */
+}
+
+.heading {
+    margin: 0; /* Remove default margin */
+    position: absolute; /* Absolute positioning */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
 }
 
 /* Style for the button */
@@ -38,7 +43,8 @@ body {
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    margin-right: 20px; /* Add margin to separate button from title */
+    position: absolute; /* Absolute positioning */
+    right: 20px; /* Align button to the right with a margin */
 }
 
 .button:hover {
