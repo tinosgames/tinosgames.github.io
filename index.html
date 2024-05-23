@@ -6,191 +6,64 @@
     <meta name="keywords" content="Games,Unblocked Games,Unity,WebGL,Unblocked,Google Sites,tino's game hub,tyler's unblocked games,tino's games unblocked">
     <meta name="author" content="Tino">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tino's Games</title>
+    <title>Tino's Games!</title>
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* CSS styles for the index.html page */
+        /* CSS styles for the home.html page */
         body {
-            background-color: #000000; /* Fallback color */
-            background-image: url('background.jpg'); /* Path to the background image */
-            background-size: cover; /* Cover the entire background */
-            background-position: center; /* Center the background image */
-            background-repeat: no-repeat; /* Do not repeat the background image */
+            background-color: #000000; /* Black background */
             color: #ffffff; /* White text color */
             font-family: 'Luckiest Guy', cursive; /* 'Luckiest Guy' font */
             text-align: center; /* Center align text */
-            padding-top: 150px; /* Add padding to center content */
-            position: relative; /* Set body to relative positioning */
-        }
-
-        /* Style for the heading */
-        .heading {
-            position: fixed; /* Fix heading position */
-            top: 10px; /* Lower the heading */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Center horizontally */
-            width: calc(100% - 40px); /* Make heading full width minus padding */
-            background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
-            padding: 10px 20px; /* Add padding top and bottom */
-            z-index: 1000; /* Ensure heading stays on top of other content */
-            transition: top 0.3s; /* Smooth transition for hiding */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .heading h1 {
-            margin: 0;
-            flex-grow: 1;
-        }
-
-        /* Hidden heading */
-        .heading.hidden {
-            top: -100px; /* Move heading out of view */
+            padding-top: 100px; /* Add padding to center content */
         }
 
         /* Style for the button */
-        .button {
+        .game-button {
+            display: inline-block;
             background-color: #4CAF50;
             border: none;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 32px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
+            margin-bottom: 20px; /* Add margin to separate from other content */
             cursor: pointer;
         }
 
-        .button:hover {
+        .game-button:hover {
             background-color: #45a049;
-        }
-
-        /* Style for the game links */
-        .game-links {
-            display: grid; /* Use grid layout for the links */
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
-            grid-gap: 20px; /* Gap between grid items */
-            justify-content: center; /* Center align grid items */
-            margin-top: 50px; /* Adjust margin to bring links up slightly */
-        }
-
-        /* Style for game images */
-        .game-links img {
-            max-width: 100%; /* Set maximum width for images */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px; /* Add border radius for rounded corners */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
-        }
-
-        /* Style for the game content iframe */
-        #game-content {
-            width: 100%;
-            height: 600px;
-            border: none;
-            margin-top: 20px;
-            display: none; /* Hidden by default */
         }
     </style>
 </head>
 <body>
 
-<div class="heading">
-    <h1>Tino's Games!</h1>   
-    <!-- Button to navigate to the home.html page -->
-    <a class="button" href="home.html">Home Page</a>
-</div>
+<h1>Welcome to Tino's Games!</h1>
+<p>This is the home page of our website. Here you can find some of the best games on the internet all unblocked! Enjoy and make sure to not get caught!</p>
 
-<!-- Wrap game links in a container -->
-<div class="game-links">
-    <a href="1v1.lol">
-        <img src="1v1_lol_image.jpg" alt="1v1.LOL">
-    </a>
-    <a href="2048">
-        <img src="2048.jpg" alt="2048">
-    </a>
-    <a href="basketrandom">
-        <img src="basket_random_image.jpg" alt="Basket Random">
-    </a>
-    <a href="bitlife">
-        <img src="bit_life_image.jpg" alt="BitLife">
-    </a>
-    <a href="boxingrandom">
-        <img src="boxing_random_image.jpg" alt="Boxing Random">
-    </a>
-    <a href="brawl-stars-project-laser">
-        <img src="brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser">
-    </a>
-    <a href="chromedino">
-        <img src="chrome_dino_image.jpg" alt="Chrome Dino">
-    </a>
-    <a href="drive-mad">
-        <img src="drive_mad_image.jpg" alt="Drive Mad">
-    </a>
-    <a href="eggycar">
-        <img src="eggycar_image.jpg" alt="Eggy Car">
-    </a>
-    <a href="flappybird">
-        <img src="flappy_bird_image.jpg" alt="Flappy Bird">
-    </a>
-    <a href="eaglercraft">
-        <img src="eaglercraft_image.jpg" alt="Cracked Minecraft">
-    </a>
-    <a href="geometrydash">
-        <img src="geometry_dash_image.jpg" alt="Geometry Dash">
-    </a>
-    <a href="motox3m2">
-        <img src="moto_x3m_2_image.jpg" alt="Moto X3M 2">
-    </a>
-    <a href="mario-game">
-        <img src="mario_64_image.jpg" alt="Super Mario 64">
-    </a>
-    <a href="pacman">
-        <img src="pac_man_image.jpg" alt="Pac-Man">
-    </a>
-    <a href="retrobowl">
-        <img src="retro_bowl_image.jpg" alt="Retro Bowl">
-    </a>
-    <a href="snake">
-        <img src="snake_image.jpg" alt="Snake">
-    </a>
-    <a href="snowrider3d">
-        <img src="snow_rider_3d_image.jpg" alt="Snow Rider 3D">
-    </a>
-    <a href="subway-surfers">
-        <img src="subway_surfers_image.jpg" alt="Subway Surfers">
-    </a>
-    <a href="smashkarts">
-        <img src="smash-karts.jpg" alt="Smash Karts">
-    </a>
-    <a href="tunnelrush">
-        <img src="tunnel_rush_image.jpg" alt="Tunnel Rush">
-    </a>
-    <a href="volleyrandom">
-        <img src="volley_random_image.jpg" alt="Volley Random">
-    </a>
-</div>
-
-<iframe id="game-content"></iframe>
-
-<script>
-    // JavaScript to hide the heading on scroll
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', function() {
-        const heading = document.querySelector('.heading');
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            // Scroll down
-            heading.classList.add('hidden');
-        } else {
-            // Scroll up
-            heading.classList.remove('hidden');
-        }
-        lastScrollTop = scrollTop;
-    });
-</script>
+ <p>Scroll Down For announcements and Games Tab!</p>
+    
+    
+    
+    <!-- Button to navigate to the index.html page -->
+<a class="game-button" href="index.html">Play Games</a>
 
 </body>
 </html>
+
+    
+    
+    <h1>Announcements: </h1>
+   <p> Version 1.0.1 <p>
+    <p> Added Clickable Image Links<p>
+  <p>Updated Games<p>
+<p>__________________<p>
+ <p> Version 1.0.0:</p>
+      <p> Added "Drive Mad" </p>
+        <p>Added "Run 3"</p>
+       <p>Added "Doodle Jump"</p> 
+       <p>New Updates Soon! </p>
