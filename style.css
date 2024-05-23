@@ -1,7 +1,6 @@
-/* CSS styles for the index.html page */
 body {
     background-color: #000000; /* Fallback color */
-    background-image: url('background.jpg'); /* Path to the background image */
+    background-image: url('background.jpg'); /* Use relative path */
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the background image */
@@ -12,21 +11,29 @@ body {
     position: relative; /* Set body to relative positioning */
 }
 
-/* Style for the heading container */
-.heading-container {
-    position: fixed; /* Fix heading position */
-    top: 0; /* Align heading to the top */
-    width: 100%; /* Make heading full width */
-    background-color: #000000; /* Black background */
-    padding: 20px 0; /* Add padding top and bottom */
-    z-index: 1000; /* Ensure heading stays on top of other content */
-    display: flex; /* Use flexbox to align items */
-    justify-content: space-between; /* Space between heading and button */
-    align-items: center; /* Center align items vertically */
-}
-
 /* Style for the heading */
 .heading {
+    position: fixed; /* Fix heading position */
+    top: 0; /* Align heading to the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 100%; /* Make heading full width */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    padding: 20px; /* Add padding */
+    z-index: 1000; /* Ensure heading stays on top of other content */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between heading and button */
+    align-items: center; /* Center align items vertically */
+    transition: top 0.3s; /* Smooth transition for hiding */
+}
+
+/* Hidden heading */
+.heading.hidden {
+    top: -100px; /* Move heading out of view */
+}
+
+/* Style for the heading text */
+.heading h1 {
     margin: 0; /* Remove default margin */
     flex-grow: 1; /* Allow the heading to take available space */
     text-align: center; /* Center align text */
@@ -42,7 +49,6 @@ body {
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    margin-right: 20px; /* Align button to the right with a margin */
 }
 
 .button:hover {
