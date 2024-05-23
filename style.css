@@ -21,15 +21,12 @@ body {
     padding: 20px 0; /* Add padding top and bottom */
     z-index: 1000; /* Ensure heading stays on top of other content */
     display: flex; /* Use flexbox to align items */
-    justify-content: center; /* Center the heading text */
+    justify-content: space-between; /* Space between heading and button */
     align-items: center; /* Center align items vertically */
 }
 
 .heading {
-    margin: 0; /* Remove default margin */
-    position: absolute; /* Absolute positioning */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
+    margin: 0 auto; /* Center heading text */
 }
 
 /* Style for the button */
@@ -37,14 +34,12 @@ body {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    position: absolute; /* Absolute positioning */
-    right: 20px; /* Align button to the right with a margin */
+    margin-right: 20px; /* Align button to the right with a margin */
 }
 
 .button:hover {
