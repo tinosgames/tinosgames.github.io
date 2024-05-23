@@ -12,7 +12,7 @@ body {
     position: relative; /* Set body to relative positioning */
 }
 
-/* Style for the heading */
+/* Style for the heading container */
 .heading-container {
     position: fixed; /* Fix heading position */
     top: 0; /* Align heading to the top */
@@ -25,8 +25,11 @@ body {
     align-items: center; /* Center align items vertically */
 }
 
+/* Style for the heading */
 .heading {
-    margin: 0 auto; /* Center heading text */
+    margin: 0; /* Remove default margin */
+    flex-grow: 1; /* Allow the heading to take available space */
+    text-align: center; /* Center align text */
 }
 
 /* Style for the button */
