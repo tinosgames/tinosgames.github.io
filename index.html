@@ -21,25 +21,24 @@
             color: #ffffff; /* White text color */
             font-family: 'Luckiest Guy', cursive; /* 'Luckiest Guy' font */
             text-align: center; /* Center align text */
-            padding-top: 100px; /* Add padding to center content */
+            padding-top: 150px; /* Add padding to center content */
             position: relative; /* Set body to relative positioning */
         }
 
         /* Style for the heading */
         .heading {
             position: fixed; /* Fix heading position */
-            top: 0; /* Align heading to the top */
+            top: 10px; /* Lower the heading */
             left: 50%; /* Center horizontally */
             transform: translateX(-50%); /* Center horizontally */
-            width: 100%; /* Make heading full width */
+            width: calc(100% - 40px); /* Make heading full width minus padding */
             background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
-            padding: 20px 0; /* Add padding top and bottom */
+            padding: 10px 20px; /* Add padding top and bottom */
             z-index: 1000; /* Ensure heading stays on top of other content */
             transition: top 0.3s; /* Smooth transition for hiding */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
         }
 
         .heading h1 {
