@@ -18,7 +18,7 @@ body {
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center horizontally */
     width: 100%; /* Make heading full width */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    background-color: transparent; /* Black background with transparency */
     padding: 20px; /* Add padding */
     z-index: 1000; /* Ensure heading stays on top of other content */
     display: flex; /* Use flexbox for layout */
