@@ -1,6 +1,6 @@
 body {
     background-color: #000000; /* Fallback color */
-    background-image: url('background.jpg'); /* Use relative path */
+    background-image: url('background.png'); /* Use relative path */
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the background image */
