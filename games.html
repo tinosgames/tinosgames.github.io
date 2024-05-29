@@ -9,177 +9,166 @@
     <title>Tino's Games</title>
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* CSS styles for the index.html page */
-        body {
-            background-color: #000000; /* Fallback color */
-            background-image: url('background.png'); /* Path to the background image */
-            background-size: cover; /* Cover the entire background */
-            background-position: center; /* Center the background image */
-            background-repeat: no-repeat; /* Do not repeat the background image */
-            color: #ffffff; /* White text color */
-            font-family: 'Luckiest Guy', cursive; /* 'Luckiest Guy' font */
-            text-align: center; /* Center align text */
-            padding-top: 150px; /* Add padding to center content */
-            position: relative; /* Set body to relative positioning */
-        }
-
-        /* Style for the heading */
-        .heading {
-            position: fixed; /* Fix heading position */
-            top: 10px; /* Lower the heading */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Center horizontally */
-            width: calc(100% - 40px); /* Make heading full width minus padding */
-            background-color: transparent; /* Black background with transparency */
-            padding: 10px 20px; /* Add padding top and bottom */
-            z-index: 1000; /* Ensure heading stays on top of other content */
-            transition: top 0.3s; /* Smooth transition for hiding */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .heading h1 {
-            margin: 0;
-            flex-grow: 1;
-        }
-
-        /* Hidden heading */
-        .heading.hidden {
-            top: -100px; /* Move heading out of view */
-        }
-
-        /* Style for the button */
-        .button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        /* Style for the game links */
-        .game-links {
-            display: grid; /* Use grid layout for the links */
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
-            grid-gap: 20px; /* Gap between grid items */
-            justify-content: center; /* Center align grid items */
-            margin-top: 50px; /* Adjust margin to bring links up slightly */
-        }
-
-        /* Style for game images */
-        .game-links img {
-            max-width: 100%; /* Set maximum width for images */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px; /* Add border radius for rounded corners */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
-        }
-
-        /* Style for the game content iframe */
-        #game-content {
-            width: 100%;
-            height: 600px;
-            border: none;
-            margin-top: 20px;
-            display: none; /* Hidden by default */
-        }
-    </style>
 </head>
 <body>
 
 <div class="heading">
     <h1>Tino's Games!</h1>   
     <!-- Button to navigate to the home.html page -->
-    <a class="button" href="index.html">Home Page</a>
+    <a class="button" href="home.html">Home Page</a>
 </div>
 
 <!-- Wrap game links in a container -->
 <div class="game-links">
     <a href="1v1.lol">
-        <img src="1v1_lol_image.jpg" alt="1v1.LOL">
+        <div class="game-container">
+            <img src="1v1_lol_image.jpg" alt="1v1.LOL">
+            <span class="game-name">1v1.LOL</span>
+        </div>
     </a>
     <a href="2048">
-        <img src="2048.jpg" alt="2048">
+        <div class="game-container">
+            <img src="2048.jpg" alt="2048">
+            <span class="game-name">2048</span>
+        </div>
     </a>
     <a href="basketrandom">
-        <img src="basket_random_image.jpg" alt="Basket Random">
+        <div class="game-container">
+            <img src="basket_random_image.jpg" alt="Basket Random">
+            <span class="game-name">Basket Random</span>
+        </div>
     </a>
     <a href="bitlife">
-        <img src="bit_life_image.jpg" alt="BitLife">
+        <div class="game-container">
+            <img src="bit_life_image.jpg" alt="BitLife">
+            <span class="game-name">BitLife</span>
+        </div>
     </a>
     <a href="boxingrandom">
-        <img src="boxing_random_image.jpg" alt="Boxing Random">
+        <div class="game-container">
+            <img src="boxing_random_image.jpg" alt="Boxing Random">
+            <span class="game-name">Boxing Random</span>
+        </div>
     </a>
     <a href="brawl-stars-project-laser">
-        <img src="brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser">
+        <div class="game-container">
+            <img src="brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser">
+            <span class="game-name">Brawl Stars Project Laser</span>
+        </div>
     </a>
     <a href="chromedino">
-        <img src="chrome_dino_image.jpg" alt="Chrome Dino">
+        <div class="game-container">
+            <img src="chrome_dino_image.jpg" alt="Chrome Dino">
+            <span class="game-name">Chrome Dino</span>
+        </div>
     </a>
-     <a href="cookieclicker">
-        <img src="cookie_clicker_image.jpg" alt="Cookie Clickers">
+    <a href="cookieclicker">
+        <div class="game-container">
+            <img src="cookie_clicker_image.jpg" alt="Cookie Clickers">
+            <span class="game-name">Cookie Clicker</span>
+        </div>
     </a>
     <a href="drive-mad">
-        <img src="drive_mad_image.jpg" alt="Drive Mad">
-    </a></a>
-    <a href="drifthunters">
-        <img src="drifthunters.jpg" alt="Drift Hunters">
+        <div class="game-container">
+            <img src="drive_mad_image.jpg" alt="Drive Mad">
+            <span class="game-name">Drive Mad</span>
+        </div>
     </a>
-    
+    <a href="drifthunters">
+        <div class="game-container">
+            <img src="drifthunters.jpg" alt="Drift Hunters">
+            <span class="game-name">Drift Hunters</span>
+        </div>
+    </a>
     <a href="eggycar">
-        <img src="eggycar_image.jpg" alt="Eggy Car">
+        <div class="game-container">
+            <img src="eggycar_image.jpg" alt="Eggy Car">
+            <span class="game-name">Eggy Car</span>
+        </div>
     </a>
     <a href="flappybird">
-        <img src="flappy_bird_image.jpg" alt="Flappy Bird">
+        <div class="game-container">
+            <img src="flappy_bird_image.jpg" alt="Flappy Bird">
+            <span class="game-name">Flappy Bird</span>
+        </div>
     </a>
     <a href="eaglercraft">
-        <img src="eaglercraft_image.jpg" alt="Cracked Minecraft">
+        <div class="game-container">
+            <img src="eaglercraft_image.jpg" alt="Cracked Minecraft">
+            <span class="game-name">Cracked Minecraft</span>
+        </div>
     </a>
     <a href="geometrydash">
-        <img src="geometry_dash_image.jpg" alt="Geometry Dash">
+        <div class="game-container">
+            <img src="geometry_dash_image.jpg" alt="Geometry Dash">
+            <span class="game-name">Geometry Dash</span>
+        </div>
     </a>
     <a href="motox3m2">
-        <img src="moto_x3m_2_image.jpg" alt="Moto X3M 2">
+        <div class="game-container">
+            <img src="moto_x3m_2_image.jpg" alt="Moto X3M 2">
+            <span class="game-name">Moto X3M 2</span>
+        </div>
     </a>
     <a href="mario-game">
-        <img src="mario_64_image.jpg" alt="Super Mario 64">
+        <div class="game-container">
+            <img src="mario_64_image.jpg" alt="Super Mario 64">
+            <span class="game-name">Super Mario 64</span>
+        </div>
     </a>
     <a href="pacman">
-        <img src="pac_man_image.jpg" alt="Pac-Man">
+        <div class="game-container">
+            <img src="pac_man_image.jpg" alt="Pac-Man">
+            <span class="game-name">Pac-Man</span>
+        </div>
     </a>
     <a href="retrobowl">
-        <img src="retro_bowl_image.jpg" alt="Retro Bowl">
+        <div class="game-container">
+            <img src="retro_bowl_image.jpg" alt="Retro Bowl">
+            <span class="game-name">Retro Bowl</span>
+        </div>
     </a>
     <a href="snake">
-        <img src="snake_image.jpg" alt="Snake">
+        <div class="game-container">
+            <img src="snake_image.jpg" alt="Snake">
+            <span class="game-name">Snake</span>
+        </div>
     </a>
     <a href="snowrider3d">
-        <img src="snow_rider_3d_image.jpg" alt="Snow Rider 3D">
+        <div class="game-container">
+            <img src="snow_rider_3d_image.jpg" alt="Snow Rider 3D">
+            <span class="game-name">Snow Rider 3D</span>
+        </div>
     </a>
     <a href="subway-surfers">
-        <img src="subway_surfers_image.jpg" alt="Subway Surfers">
+        <div class="game-container">
+            <img src="subway_surfers_image.jpg" alt="Subway Surfers">
+            <span class="game-name">Subway Surfers</span>
+        </div>
     </a>
     <a href="smashkarts">
-        <img src="smash-karts.jpg" alt="Smash Karts">
+        <div class="game-container">
+            <img src="smash-karts.jpg" alt="Smash Karts">
+            <span class="game-name">Smash Karts</span>
+        </div>
     </a>
-     <a href="stickman-hook">
-        <img src="stickmanhook.jpg" alt="Stickman Hook">
+    <a href="stickman-hook">
+        <div class="game-container">
+            <img src="stickmanhook.jpg" alt="Stickman Hook">
+            <span class="game-name">Stickman Hook</span>
+        </div>
     </a>
     <a href="tunnelrush">
-        <img src="tunnel_rush_image.jpg" alt="Tunnel Rush">
+        <div class="game-container">
+            <img src="tunnel_rush_image.jpg" alt="Tunnel Rush">
+            <span class="game-name">Tunnel Rush</span>
+        </div>
     </a>
     <a href="volleyrandom">
-        <img src="volley_random_image.jpg" alt="Volley Random">
+        <div class="game-container">
+            <img src="volley_random_image.jpg" alt="Volley Random">
+            <span class="game-name">Volley Random</span>
+        </div>
     </a>
 </div>
 
