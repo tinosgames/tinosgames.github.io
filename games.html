@@ -9,6 +9,90 @@
     <title>Tino's Games</title>
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS styles for the index.html page */
+        body {
+            background-color: #000000; /* Fallback color */
+            background-image: url('background.jpg'); /* Path to the background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the background image */
+            color: #ffffff; /* White text color */
+            font-family: 'Luckiest Guy', cursive; /* 'Luckiest Guy' font */
+            text-align: center; /* Center align text */
+            padding-top: 100px; /* Add padding to center content */
+            position: relative; /* Set body to relative positioning */
+        }
+
+        /* Style for the heading */
+        .heading {
+            position: fixed; /* Fix heading position */
+            top: 20px; /* Adjust top position */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            width: 100%; /* Make heading full width */
+            background-color: transparent; /* Fully transparent background */
+            padding: 20px 0; /* Add padding top and bottom */
+            z-index: 1000; /* Ensure heading stays on top of other content */
+            transition: top 0.3s; /* Smooth transition for hiding */
+            color: white; /* Ensure text is visible on all backgrounds */
+            text-shadow: 1px 1px 2px black; /* Add shadow to text for better visibility */
+        }
+
+        /* Hidden heading */
+        .heading.hidden {
+            top: -100px; /* Move heading out of view */
+        }
+
+        /* Style for the button */
+        .button {
+            background-color: rgba(76, 175, 80, 0.7); /* Semi-transparent green background */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px auto; /* Center button horizontally */
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: rgba(69, 160, 73, 0.7); /* Darker semi-transparent green background */
+        }
+
+        /* Style for the game links */
+        .game-links {
+            display: grid; /* Use grid layout for the links */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
+            grid-gap: 20px; /* Gap between grid items */
+            justify-content: center; /* Center align grid items */
+            margin-top: 50px; /* Adjust margin to bring links up slightly */
+        }
+
+        /* Style for game images */
+        .game-links img {
+            max-width: 100%; /* Set maximum width for images */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+            transition: filter 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .game-links img:hover {
+            filter: brightness(70%); /* Darken image on hover */
+        }
+
+        /* Style for the game content iframe */
+        #game-content {
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin-top: 20px;
+            display: none; /* Hidden by default */
+        }
+    </style>
 </head>
 <body>
 
@@ -17,7 +101,6 @@
     <!-- Button to navigate to the home.html page -->
     <a class="button" href="home.html">Home Page</a>
 </div>
-
 <!-- Wrap game links in a container -->
 <div class="game-links">
     <a href="1v1.lol">
@@ -168,7 +251,7 @@
         <div class="game-container">
             <img src="volley_random_image.jpg" alt="Volley Random">
             <span class="game-name">Volley Random</span>
-        </div>
+
     </a>
 </div>
 
