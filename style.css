@@ -1,6 +1,7 @@
+/* CSS styles for the index.html page */
 body {
     background-color: #000000; /* Fallback color */
-    background-image: url('background.png'); /* Use relative path */
+    background-image: url('background.jpg'); /* Path to the background image */
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the background image */
@@ -18,12 +19,10 @@ body {
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center horizontally */
     width: 100%; /* Make heading full width */
-    background-color: transparent; /* Fully transparent background */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
     padding: 20px 0; /* Add padding top and bottom */
     z-index: 1000; /* Ensure heading stays on top of other content */
     transition: top 0.3s; /* Smooth transition for hiding */
-    color: white; /* Ensure text is visible on all backgrounds */
-    text-shadow: 1px 1px 2px black; /* Add shadow to text for better visibility */
 }
 
 /* Hidden heading */
@@ -33,7 +32,7 @@ body {
 
 /* Style for the button */
 .button {
-    background-color: rgba(76, 175, 80, 0.7); /* Semi-transparent green background */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -41,12 +40,15 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 20px auto; /* Center button horizontally */
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .button:hover {
-    background-color: rgba(69, 160, 73, 0.7); /* Darker semi-transparent green background */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Style for the game links */
@@ -58,17 +60,43 @@ body {
     margin-top: 50px; /* Adjust margin to bring links up slightly */
 }
 
+/* Style for game containers */
+.game-container {
+    position: relative; /* Position relative to contain absolute positioned elements */
+    display: inline-block; /* Inline-block for proper spacing */
+}
+
 /* Style for game images */
 .game-links img {
     max-width: 100%; /* Set maximum width for images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Add border radius for rounded corners */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
-    transition: filter 0.3s; /* Smooth transition for hover effect */
+    transition: filter 0.3s, transform 0.3s; /* Smooth transition for hover effect */
 }
 
-.game-links img:hover {
-    filter: brightness(70%); /* Darken image on hover */
+/* Style for the game name */
+.game-name {
+    position: absolute; /* Absolute position to overlay on image */
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to left */
+    right: 0; /* Stretch to right */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white; /* White text color */
+    padding: 10px; /* Padding for better readability */
+    text-align: center; /* Center align text */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s; /* Smooth transition for visibility */
+}
+
+/* Hover effects */
+.game-container:hover img {
+    filter: brightness(70%); /* Darken the image on hover */
+    transform: scale(1.05); /* Slightly scale up the image */
+}
+
+.game-container:hover .game-name {
+    opacity: 1; /* Show the game name on hover */
 }
 
 /* Style for the game content iframe */
