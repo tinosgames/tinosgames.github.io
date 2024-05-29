@@ -1,7 +1,7 @@
 /* CSS styles for the index.html page */
 body {
     background-color: #000000; /* Fallback color */
-    background-image: url('background.jpg'); /* Path to the background image */
+    background-image: url('background.png'); /* Path to the background image */
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the background image */
@@ -19,7 +19,7 @@ body {
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center horizontally */
     width: 100%; /* Make heading full width */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    background-color: transparent; /* Black background with transparency */
     padding: 20px 0; /* Add padding top and bottom */
     z-index: 1000; /* Ensure heading stays on top of other content */
     transition: top 0.3s; /* Smooth transition for hiding */
