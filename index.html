@@ -135,10 +135,10 @@
     // JavaScript to perform search
     function performSearch() {
         const searchTerm = document.getElementById('searchTerm').value;
-        const searchResultsIframe = document.getElementById('searchResults');
-        searchResultsIframe.src = `proxy.php?query=${encodeURIComponent(searchTerm)}`;
+        const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchTerm)}`;
+        window.open(searchUrl, '_blank', 'about:blank');
     }
 </script>
 
 </body>
-</html>
+</html
