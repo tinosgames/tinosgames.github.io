@@ -9,6 +9,7 @@
     <title>Home - Tino's Games</title>
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="style.css">
+
     <style>
         /* CSS styles for the home.html page */
         body {
@@ -71,22 +72,24 @@
         .content {
             margin-top: 100px;
         }
-
-        /* Style for the search bar */
-        .search-bar {
-            margin: 20px 0;
+        
+        /* Style for the search form */
+        .search-form {
+            margin-top: 20px;
         }
 
-        .search-bar input {
-            padding: 10px;
+        .search-form input[type="text"] {
+            padding: 8px;
             width: 300px;
             font-size: 16px;
         }
 
-        .search-bar button {
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
+        /* Style for the search results iframe */
+        #searchResults {
+            width: 100%;
+            height: 500px;
+            border: none;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -101,19 +104,19 @@
 <div class="content">
     <p>Welcome to Tino's Games, the best website for unblocked games!</p>
     <p>Browse our selection of games and have fun!</p>
+  
     <p># UPDATES!</p>
-    <p>-Switched Page Format</p>
-    <p>-Removed Clutter</p>
-    <p>-Added More Games</p>
+    <p>- Switched Page Format</p>
+    <p>- Removed Clutter</p>
+    <p>- Added More Games</p>
 
-    <!-- Search bar -->
-    <div class="search-bar">
-        <input type="text" id="searchTerm" placeholder="Search...">
-        <button onclick="performSearch()">Search</button>
-    </div>
+    <!-- Search form -->
+    <form class="search-form" onsubmit="performSearch(); return false;">
+        <input type="text" id="searchTerm" placeholder="Search on Google" onkeypress="return handleKeyPress(event);">
+    </form>
 
-    <!-- Embed the PHP proxy within an iframe -->
-    <iframe id="searchResults" width="100%" height="500px" style="border:none;"></iframe>
+    <!-- Container for search results -->
+    <iframe id="searchResults"></iframe>
 </div>
 
 <script>
@@ -136,9 +139,6 @@
     function performSearch() {
         const searchTerm = document.getElementById('searchTerm').value;
         const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchTerm)}`;
-        window.open(searchUrl, '_blank', 'about:blank');
-    }
-</script>
 
-</body>
-</html
+        // Create an iframe to contain the search results
+        const searchResults
