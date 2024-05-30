@@ -9,7 +9,6 @@
     <title>Home - Tino's Games</title>
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="style.css">
-
     <style>
         /* CSS styles for the home.html page */
         body {
@@ -72,6 +71,23 @@
         .content {
             margin-top: 100px;
         }
+
+        /* Style for the search bar */
+        .search-bar {
+            margin: 20px 0;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        .search-bar button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -90,8 +106,14 @@
     <p>-Removed Clutter</p>
     <p>-Added More Games</p>
 
+    <!-- Search bar -->
+    <div class="search-bar">
+        <input type="text" id="searchTerm" placeholder="Search...">
+        <button onclick="performSearch()">Search</button>
+    </div>
+
     <!-- Embed the PHP proxy within an iframe -->
-    <iframe src="proxy.php" width="100%" height="500px" style="border:none;"></iframe>
+    <iframe id="searchResults" width="100%" height="500px" style="border:none;"></iframe>
 </div>
 
 <script>
@@ -109,6 +131,13 @@
         }
         lastScrollTop = scrollTop;
     });
+
+    // JavaScript to perform search
+    function performSearch() {
+        const searchTerm = document.getElementById('searchTerm').value;
+        const searchResultsIframe = document.getElementById('searchResults');
+        searchResultsIframe.src = `proxy.php?query=${encodeURIComponent(searchTerm)}`;
+    }
 </script>
 
 </body>
