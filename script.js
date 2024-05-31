@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-input');
     const gameLinks = document.querySelectorAll('.game-links a');
 
-    searchInput.addEventListener('keyup', function(event) {
+    function filterGames() {
         const query = searchInput.value.toLowerCase();
 
         gameLinks.forEach(function(link) {
@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.style.display = 'none';
             }
         });
-    });
+    }
+
+    searchInput.addEventListener('keyup', filterGames);
 
     searchInput.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault(); // Prevent form submission if inside a form
-            // Trigger the keyup event to perform the search
-            const eventKeyup = new Event('keyup');
-            searchInput.dispatchEvent(eventKeyup);
+            filterGames();
         }
     });
 });
