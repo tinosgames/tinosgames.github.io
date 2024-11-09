@@ -188,6 +188,21 @@
             <img src="drifthunters.jpg" alt="Drift Hunters">
             <span class="game-name">Drift Hunters</span>
         </div>
+        <a href="javascript:void(0);" onclick="openGame('doodle-jump.html')">
+    <div class="game-container">
+        <img src="doodlejump.png" alt="Doodle Jump">
+        <span class="game-name">Doodle JUmp</span>
+    </div>
+</a>
+
+<script>
+    function openGame(page) {
+        // Opens the HTML page in a new about:blank tab and redirects to the specified file
+        const newWindow = window.open('about:blank');
+        newWindow.location.href = page; // Set the HTML file to load in the new tab
+    }
+</script>
+
     </a>
     <a href="javascript:void(0);" onclick="openGame('eggycar')">
         <div class="game-container">
