@@ -150,6 +150,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://webglmath.github.io/slope/</loc>
+  <lastmod>2023-04-27T21:48:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://monkeygg2.github.io/games/2048/</loc>
   <lastmod>2023-04-27T21:48:09+00:00</lastmod>
   <priority>0.80</priority>
