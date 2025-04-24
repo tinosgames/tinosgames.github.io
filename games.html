@@ -2,467 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="The Best website for unblocked games!">
-    <meta name="keywords" content="Games,Unblocked Games,Unity,WebGL,Unblocked,Google Sites,tino's game hub,tyler's unblocked games,tino's games unblocked,poki,poki games, best games">
+    <meta name="description" content="The best website for unblocked games! Play your favorite games anytime, anywhere.">
+    <meta name="keywords" content="Games, Unblocked Games, WebGL, Free Games, Online Games, Tino's Games">
     <meta name="author" content="Tino">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tino's Games</title>
+    <title>Tino's Games - Play Unblocked Games Online</title>
     <link rel="icon" type="image/x-icon" href="favicon.jpeg">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* CSS styles for the index.html page */
-        body {
-            background-color: #000000; /* Fallback color */
-            background-image: url('background.png'); /* Path to the background image */
-            background-size: cover; /* Cover the entire background */
-            background-position: center; /* Center the background image */
-            background-repeat: no-repeat; /* Do not repeat the background image */
-            color: #ffffff; /* White text color */
-            font-family: 'Arial'; /* 'Luckiest Guy' font */
-            text-align: center; /* Center align text */
-            padding-top: 100px; /* Add padding to center content */
-            position: relative; /* Set body to relative positioning */
-        }
-
-        /* Style for the heading */
-        .heading {
-            position: fixed; /* Fix heading position */
-            top: 20px; /* Adjust top position */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Center horizontally */
-            width: 100%; /* Make heading full width */
-            background-color: transparent; /* Fully transparent background */
-            padding: 20px 0; /* Add padding top and bottom */
-            z-index: 1000; /* Ensure heading stays on top of other content */
-            transition: top 0.3s; /* Smooth transition for hiding */
-            color: white; /* Ensure text is visible on all backgrounds */
-            text-shadow: 1px 1px 2px black; /* Add shadow to text for better visibility */
-        }
-
-        /* Hidden heading */
-        .heading.hidden {
-            top: -100px; /* Move heading out of view */
-        }
-
-        /* Style for the button */
-        .button {
-            background-color: rgba(76, 175, 80, 0.7); /* Semi-transparent green background */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 20px auto; /* Center button horizontally */
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: rgba(69, 160, 73, 0.7); /* Darker semi-transparent green background */
-        }
-
-        /* Style for the search bar */
-        .search-container {
-            margin-top: 20px;
-        }
-
-        .search-container input {
-            padding: 10px;
-            width: 50%;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 2px solid #ddd;
-            margin-bottom: 20px;
-        }
-
-        /* Style for the game links */
-        .game-links {
-            display: grid; /* Use grid layout for the links */
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
-            grid-gap: 20px; /* Gap between grid items */
-            justify-content: center; /* Center align grid items */
-            margin-top: 50px; /* Adjust margin to bring links up slightly */
-        }
-
-        /* Style for game images */
-        .game-links img {
-            max-width: 100%; /* Set maximum width for images */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px; /* Add border radius for rounded corners */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
-            transition: filter 0.3s; /* Smooth transition for hover effect */
-        }
-
-        .game-links img:hover {
-            filter: brightness(70%); /* Darken image on hover */
-        }
-
-        /* Style for game names */
-        .game-name {
-            display: none;
-            text-align: center;
-            margin-top: 5px;
-        }
-
-        .game-container {
-            position: relative;
-        }
-
-        .game-container:hover .game-name {
-            display: block;
-        }
-    </style>
 </head>
 <body>
 
-<div class="heading">
-    <h1>Tino's Games!</h1>   
-    <!-- Button to navigate to the home.html page -->
-    <a class="button" href="index.html">Home Page</a>
-</div>
-
-    <div class="Logo" id="Logo">
-    <img src="favicon.jpeg" style="width: 200px; height: 200px;">
-</div>
-
-
-<!-- Search bar container -->
-<div class="search-container">
-    <input type="text" id="search-input" placeholder="Search Games...">
-</div>
-
-<!-- Game links container -->
-<div class="game-links" id="game-links">
-    <a href="javascript:void(0);" onclick="openGame('1v1.lol')">
-        <div class="game-container">
-            <img src="1v1_lol_image.jpg" alt="1v1.LOL">
-            <span class="game-name">1v1.LOL</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('2048')">
-        <div class="game-container">
-            <img src="2048.jpg" alt="2048">
-            <span class="game-name">2048</span>
-        </div>
-         </a>
-    <a href="javascript:void(0);" onclick="openGame('amongus.html')">
-        <div class="game-container">
-            <img src="amongus.jpeg" alt="Among Us">
-            <span class="game-name">Among Us</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('basketrandom')">
-        <div class="game-container">
-            <img src="basket_random_image.jpg" alt="Basket Random">
-            <span class="game-name">Basket Random</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('bitlife')">
-        <div class="game-container">
-            <img src="bit_life_image.jpg" alt="BitLife">
-            <span class="game-name">BitLife</span>
-        </div>
-        </a>
-     <a href="javascript:void(0);" onclick="openGame('blockblast')">
-        <div class="game-container">
-            <img src="blockblast.png" alt="Block Blast">
-            <span class="game-name">Block Blast</span>
-        </div>
-        </a>
-     <a href="javascript:void(0);" onclick="openGame('https://blooketbot.glitch.me/')">
-        <div class="game-container">
-            <img src="blooket.png" alt="Blooket Hacks">
-            <span class="game-name">Blooket Hacks</span>
-        </div>
-          </a>
-     <a href="javascript:void(0);" onclick="openGame('bottle.html')">
-        <div class="game-container">
-            <img src="bottle.png" alt="Bottle Flip 3D">
-            <span class="game-name">Bottle Flip 3D</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('boxingrandom')">
-        <div class="game-container">
-            <img src="boxing_random_image.jpg" alt="Boxing Random">
-            <span class="game-name">Boxing Random</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('brawl-stars-project-laser')">
-        <div class="game-container">
-            <img src="brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser">
-            <span class="game-name">Brawl Stars Project Laser</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('chromedino')">
-        <div class="game-container">
-            <img src="chrome_dino_image.jpg" alt="Chrome Dino">
-            <span class="game-name">Chrome Dino</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('cookieclicker')">
-        <div class="game-container">
-            <img src="cookie_clicker_image.jpg" alt="Cookie Clicker">
-            <span class="game-name">Cookie Clicker</span>
-        </div>
-        </a>
-    <a href="javascript:void(0);" onclick="openGame('crossy-road')">
-        <div class="game-container">
-            <img src="crossy_road_image.jpg" alt="Crossy Road">
-            <span class="game-name">Crossy Road</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('drive-mad')">
-        <div class="game-container">
-            <img src="drive_mad_image.jpg" alt="Drive Mad">
-            <span class="game-name">Drive Mad</span>
-        </div>
-        </a>
-    <a href="javascript:void(0);" onclick="openGame('drift-boss')">
-        <div class="game-container">
-            <img src="driftboss.jpg" alt="Drift Boss">
-            <span class="game-name">Drift Boss</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('drifthunters')">
-        <div class="game-container">
-            <img src="drifthunters.jpg" alt="Drift Hunters">
-            <span class="game-name">Drift Hunters</span>
-        </div>
-        <a href="javascript:void(0);" onclick="openGame('doodle-jump.html')">
-    <div class="game-container">
-        <img src="doodlejump.png" alt="Doodle Jump">
-        <span class="game-name">Doodle JUmp</span>
+<header class="header">
+    <div class="logo">
+        <img src="favicon.jpeg" alt="Tino's Games Logo" class="logo-image">
     </div>
-</a>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="#games-section" class="nav-link">Games</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+</header>
 
-<script>
-    function openGame(page) {
-        // Opens the HTML page in a new about:blank tab and redirects to the specified file
-        const newWindow = window.open('about:blank');
-        newWindow.location.href = page; // Set the HTML file to load in the new tab
-    }
-</script>
+<main>
+    <section class="hero">
+        <h1 class="hero-title">Welcome to Tino's Games!</h1>
+        <p class="hero-description">Your ultimate hub for unblocked games. Play anywhere, anytime!</p>
+        <a href="#games-section" class="cta-button">Explore Games</a>
+    </section>
 
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('eggycar')">
-        <div class="game-container">
-            <img src="eggycar_image.jpg" alt="Eggy Car">
-            <span class="game-name">Eggy Car</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('flappybird')">
-        <div class="game-container">
-            <img src="flappy_bird_image.jpg" alt="Flappy Bird">
-            <span class="game-name">Flappy Bird</span>
-        </div>
-        </a>
-    <a href="javascript:void(0);" onclick="openGame('fnaf-1')">
-        <div class="game-container">
-            <img src="FNAF1.png" alt="FNAF 1">
-            <span class="game-name">Five Nights At Freddy's</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('eaglercraft')">
-        <div class="game-container">
-            <img src="eaglercraft_image.jpg" alt="Cracked Minecraft">
-            <span class="game-name">Cracked Minecraft</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('geometrydash')">
-        <div class="game-container">
-            <img src="geometry_dash_image.jpg" alt="Geometry Dash">
-            <span class="game-name">Geometry Dash</span>
-        </div>
-        </a>
-    <a href="javascript:void(0);" onclick="openGame('granrun.html')">
-        <div class="game-container">
-            <img src="angry.png" alt="Angry Gran Run">
-            <span class="game-name">Angry Gran Run</span>
-        </div>
-        </a>
-    <a href="javascript:void(0);" onclick="openGame('google-feud')">
-        <div class="game-container">
-            <img src="google-feud.png" alt="Google Feud">
-            <span class="game-name">Google Feud</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('hackertype')">
-        <div class="game-container">
-            <img src="hackertype.png" alt="Hackertype">
-            <span class="game-name">Hacker Type</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('motox3m2')">
-        <div class="game-container">
-            <img src="motox3m_image.jpg" alt="Moto X3M 2">
-            <span class="game-name">Moto X3M 2</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('paperio2')">
-        <div class="game-container">
-            <img src="paperio.jpg" alt="Paper io 2">
-            <span class="game-name">Paper IO 2</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('mario-game')">
-        <div class="game-container">
-            <img src="mario_64_image.jpg" alt="Super Mario 64">
-            <span class="game-name">Super Mario 64</span>
-        </div>
-         </a>
-    <a href="javascript:void(0);" onclick="openGame('slope')">
-        <div class="game-container">
-            <img src="slope_image.jpg" alt="Slope Game">
-            <span class="game-name">Slope</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('pacman')">
-        <div class="game-container">
-            <img src="pac_man_image.jpg" alt="Pac-Man">
-            <span class="game-name">Pac-Man</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('retrobowl')">
-        <div class="game-container">
-            <img src="retro_bowl_image.jpg" alt="Retro Bowl">
-            <span class="game-name">Retro Bowl</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('snake')">
-        <div class="game-container">
-            <img src="snake_image.jpg" alt="Snake">
-            <span class="game-name">Snake</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('snowrider3d')">
-        <div class="game-container">
-            <img src="snow_rider_3d_image.jpg" alt="Snow Rider 3D">
-            <span class="game-name">Snow Rider 3D</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('subway-surfers')">
-        <div class="game-container">
-            <img src="subway_surfers_image.jpg" alt="Subway Surfers">
-            <span class="game-name">Subway Surfers</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('smashkarts.html')">
-        <div class="game-container">
-            <img src="smash-karts.jpg" alt="Smash Karts">
-            <span class="game-name">Smash Karts</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('stack')">
-        <div class="game-container">
-            <img src="stack.png" alt="Stack">
-            <span class="game-name">Play Stack</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('stickman-hook')">
-        <div class="game-container">
-            <img src="stickmanhook.jpg" alt="Stickman Hook">
-            <span class="game-name">Stickman Hook</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('tunnelrush')">
-        <div class="game-container">
-            <img src="tunnel_rush_image.jpg" alt="Tunnel Rush">
-            <span class="game-name">Tunnel Rush</span>
-        </div>
-            </a>
-    <a href="javascript:void(0);" onclick="openGame('twotunnel.html')">
-        <div class="game-container">
-            <img src="twotunnel.png" alt="Two Tunnel 3D">
-            <span class="game-name">Two Tunnel 3D</span>
-        </div>
-        </a>
-    <a href="javascript:void(0);" onclick="openGame('temple-run-2')">
-        <div class="game-container">
-            <img src="templerun.jpg" alt="Temple Run">
-            <span class="game-name">Temple Run 2</span>
-        </div>
-    </a>
-    <a href="javascript:void(0);" onclick="openGame('volleyrandom')">
-        <div class="game-container">
-            <img src="volley_random_image.jpg" alt="Volley Random">
-            <span class="game-name">Volley Random</span>
-        </div>
-    </a>
-</div>
+    <section class="search-section">
+        <input type="text" id="search-input" class="search-bar" placeholder="Search for games...">
+    </section>
 
-<!-- Overlay for returning to the games page -->
-<div class="overlay">
-    <a href="games.html" class="return-button">Return to Games Page</a>
-</div>
+    <section id="games-section" class="games-section">
+        <h2 class="section-title">Popular Games</h2>
+        <div class="games-grid" id="game-links">
+            <div class="game-card">
+                <img src="1v1_lol_image.jpg" alt="1v1.LOL Game" class="game-image">
+                <p class="game-title">1v1.LOL</p>
+            </div>
+            <div class="game-card">
+                <img src="2048.jpg" alt="2048 Game" class="game-image">
+                <p class="game-title">2048</p>
+            </div>
+            <div class="game-card">
+                <img src="amongus.jpeg" alt="Among Us Game" class="game-image">
+                <p class="game-title">Among Us</p>
+            </div>
+            <div class="game-card">
+                <img src="basket_random_image.jpg" alt="Basket Random Game" class="game-image">
+                <p class="game-title">Basket Random</p>
+            </div>
+            <div class="game-card">
+                <img src="bit_life_image.jpg" alt="BitLife Game" class="game-image">
+                <p class="game-title">BitLife</p>
+            </div>
+            <div class="game-card">
+                <img src="blockblast.png" alt="Block Blast Game" class="game-image">
+                <p class="game-title">Block Blast</p>
+            </div>
+            <div class="game-card">
+                <img src="blooket.png" alt="Blooket Hacks Game" class="game-image">
+                <p class="game-title">Blooket Hacks</p>
+            </div>
+            <div class="game-card">
+                <img src="bottle.png" alt="Bottle Flip 3D Game" class="game-image">
+                <p class="game-title">Bottle Flip 3D</p>
+            </div>
+            <div class="game-card">
+                <img src="boxing_random_image.jpg" alt="Boxing Random Game" class="game-image">
+                <p class="game-title">Boxing Random</p>
+            </div>
+            <div class="game-card">
+                <img src="chrome_dino_image.jpg" alt="Chrome Dino Game" class="game-image">
+                <p class="game-title">Chrome Dino</p>
+            </div>
+            <div class="game-card">
+                <img src="cookie_clicker_image.jpg" alt="Cookie Clicker Game" class="game-image">
+                <p class="game-title">Cookie Clicker</p>
+            </div>
+            <div class="game-card">
+                <img src="geometry_dash_image.jpg" alt="Geometry Dash Game" class="game-image">
+                <p class="game-title">Geometry Dash</p>
+            </div>
+            <div class="game-card">
+                <img src="pac_man_image.jpg" alt="Pac-Man Game" class="game-image">
+                <p class="game-title">Pac-Man</p>
+            </div>
+            <div class="game-card">
+                <img src="subway_surfers_image.jpg" alt="Subway Surfers Game" class="game-image">
+                <p class="game-title">Subway Surfers</p>
+            </div>
+            <div class="game-card">
+                <img src="templerun.jpg" alt="Temple Run Game" class="game-image">
+                <p class="game-title">Temple Run</p>
+            </div>
+            <div class="game-card">
+                <img src="flappy_bird_image.jpg" alt="Flappy Bird Game" class="game-image">
+                <p class="game-title">Flappy Bird</p>
+            </div>
+        </div>
+    </section>
+</main>
 
-<style>
-    .overlay {
-        position: fixed;
-        top: 10px; /* Adjust the vertical position */
-        left: 10px; /* Position buttons on the left */
-        z-index: 1000; /* Ensure buttons are above the game */
-        display: flex;
-        flex-direction: column;
-        gap: 5px; /* Space between buttons */
-    }
+<footer class="footer">
+    <p>&copy; 2025 Tino's Games. All rights reserved.</p>
+</footer>
 
-    .return-button {
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 10px;
-        text-decoration: none;
-        border-radius: 5px;
-        opacity: 0.8;
-    }
-
-    .return-button:hover {
-        opacity: 1; /* Full opacity on hover */
-    }
-</style>
-
-<script>
-    function openGame(url) {
-        // Open the game in a new blank page
-        const newWindow = window.open('about:blank');
-        newWindow.location.href = url; // Redirect to the game URL
-    }
-</script>
-
-
-
-
+<!-- Scroll to top button -->
+<button onclick="scrollToTop()" id="scroll-to-top" title="Go to top">⬆</button>
 
 <script>
     // JavaScript to filter games based on search input
-    document.getElementById('search-input').addEventListener('keyup', function() {
+    document.getElementById('search-input').addEventListener('input', function () {
         const query = this.value.toLowerCase();
-        const games = document.querySelectorAll('.game-container');
-        
-        games.forEach(function(game) {
-            const gameName = game.querySelector('.game-name').textContent.toLowerCase();
-            if (gameName.includes(query)) {
-                game.style.display = '';
-            } else {
-                game.style.display = 'none';
-            }
+        const games = document.querySelectorAll('.game-card');
+
+        games.forEach(game => {
+            const title = game.querySelector('.game-title').textContent.toLowerCase();
+            game.style.display = title.includes(query) ? 'block' : 'none';
         });
     });
 
-    // JavaScript to hide the heading on scroll
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', function() {
-        const heading = document.querySelector('.heading');
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            // Scroll down
-            heading.classList.add('hidden');
+    // Scroll to top button functionality
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show/hide scroll-to-top button
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopButton.style.display = 'block';
         } else {
-            // Scroll up
-            heading.classList.remove('hidden');
+            scrollToTopButton.style.display = 'none';
         }
-        lastScrollTop = scrollTop;
-    });
+    };
 </script>
 
 </body>
