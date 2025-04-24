@@ -6,9 +6,150 @@
     <meta name="keywords" content="Games, Unblocked Games, WebGL, Free Games, Online Games, Tino's Games">
     <meta name="author" content="Tino">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tino's Games - Play Unblocked Games Online</title>
+    <title>Tino's Games - Play Unblocked Games</title>
     <link rel="icon" type="image/x-icon" href="favicon.jpeg">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: linear-gradient(135deg, #2c003e, #000); /* Purple gradient background */
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #a855f7; /* Purple hover color */
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #fff;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-description {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+
+        /* Search Section */
+        .search-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .search-bar {
+            padding: 0.8rem;
+            width: 80%;
+            max-width: 500px;
+            border: 2px solid #a855f7; /* Purple border */
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Games Section */
+        .games-section {
+            padding: 2rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
+            gap: 1.5rem; /* Space between grid items */
+            padding: 0 1rem; /* Add padding to the grid */
+        }
+
+        .game-card {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for cards */
+            border: 2px solid #a855f7; /* Purple border */
+            border-radius: 10px;
+            padding: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color */
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px); /* Hover effect */
+            box-shadow: 0 5px 15px rgba(168, 85, 247, 0.5); /* Purple shadow */
+        }
+
+        .game-image {
+            width: 100%; /* Scale image to fit within the card */
+            height: auto;
+            max-height: 120px; /* Ensure the images don't grow too large */
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+            object-fit: cover; /* Ensure images are cropped nicely */
+        }
+
+        .game-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #a855f7; /* Purple font color */
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,9 +167,8 @@
 
 <main>
     <section class="hero">
-        <h1 class="hero-title">Welcome to Tino's Games!</h1>
-        <p class="hero-description">Your ultimate hub for unblocked games. Play anywhere, anytime!</p>
-        <a href="#games-section" class="cta-button">Explore Games</a>
+        <h1 class="hero-title">Explore Our Game Collection</h1>
+        <p class="hero-description">Play unblocked games from anywhere. Fun and free for everyone!</p>
     </section>
 
     <section class="search-section">
@@ -36,7 +176,7 @@
     </section>
 
     <section id="games-section" class="games-section">
-        <h2 class="section-title">Popular Games</h2>
+        <h2 class="section-title">Available Games</h2>
         <div class="games-grid" id="game-links">
             <div class="game-card">
                 <img src="1v1_lol_image.jpg" alt="1v1.LOL Game" class="game-image">
@@ -55,30 +195,6 @@
                 <p class="game-title">Basket Random</p>
             </div>
             <div class="game-card">
-                <img src="bit_life_image.jpg" alt="BitLife Game" class="game-image">
-                <p class="game-title">BitLife</p>
-            </div>
-            <div class="game-card">
-                <img src="blockblast.png" alt="Block Blast Game" class="game-image">
-                <p class="game-title">Block Blast</p>
-            </div>
-            <div class="game-card">
-                <img src="blooket.png" alt="Blooket Hacks Game" class="game-image">
-                <p class="game-title">Blooket Hacks</p>
-            </div>
-            <div class="game-card">
-                <img src="bottle.png" alt="Bottle Flip 3D Game" class="game-image">
-                <p class="game-title">Bottle Flip 3D</p>
-            </div>
-            <div class="game-card">
-                <img src="boxing_random_image.jpg" alt="Boxing Random Game" class="game-image">
-                <p class="game-title">Boxing Random</p>
-            </div>
-            <div class="game-card">
-                <img src="chrome_dino_image.jpg" alt="Chrome Dino Game" class="game-image">
-                <p class="game-title">Chrome Dino</p>
-            </div>
-            <div class="game-card">
                 <img src="cookie_clicker_image.jpg" alt="Cookie Clicker Game" class="game-image">
                 <p class="game-title">Cookie Clicker</p>
             </div>
@@ -94,14 +210,6 @@
                 <img src="subway_surfers_image.jpg" alt="Subway Surfers Game" class="game-image">
                 <p class="game-title">Subway Surfers</p>
             </div>
-            <div class="game-card">
-                <img src="templerun.jpg" alt="Temple Run Game" class="game-image">
-                <p class="game-title">Temple Run</p>
-            </div>
-            <div class="game-card">
-                <img src="flappy_bird_image.jpg" alt="Flappy Bird Game" class="game-image">
-                <p class="game-title">Flappy Bird</p>
-            </div>
         </div>
     </section>
 </main>
@@ -110,11 +218,8 @@
     <p>&copy; 2025 Tino's Games. All rights reserved.</p>
 </footer>
 
-<!-- Scroll to top button -->
-<button onclick="scrollToTop()" id="scroll-to-top" title="Go to top">⬆</button>
-
 <script>
-    // JavaScript to filter games based on search input
+    // Filter games based on search query
     document.getElementById('search-input').addEventListener('input', function () {
         const query = this.value.toLowerCase();
         const games = document.querySelectorAll('.game-card');
@@ -124,21 +229,6 @@
             game.style.display = title.includes(query) ? 'block' : 'none';
         });
     });
-
-    // Scroll to top button functionality
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Show/hide scroll-to-top button
-    const scrollToTopButton = document.getElementById('scroll-to-top');
-    window.onscroll = function () {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            scrollToTopButton.style.display = 'block';
-        } else {
-            scrollToTopButton.style.display = 'none';
-        }
-    };
 </script>
 
 </body>
