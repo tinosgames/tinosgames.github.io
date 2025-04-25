@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Settings page for customizing Tino's Games experience.">
+    <title>Settings - Tino's Games</title>
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c003e, #000);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #a855f7; /* Purple hover effect */
+        }
+
+        .content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .settings-container {
+            margin: 2rem auto;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #a855f7;
+        }
+
+        .settings-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 0.8rem 1rem;
+            background-color: #1a1a1a;
+            border-radius: 5px;
+            border: 2px solid #a855f7;
+            color: white;
+        }
+
+        .toggle label {
+            font-size: 1.2rem;
+        }
+
+        .toggle input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #a855f7; /* Purple checkbox */
+        }
+
+        .save-button {
+            margin-top: 1.5rem;
+            background-color: #a855f7;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .save-button:hover {
+            background-color: #9333ea;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 style="margin: 0; font-size: 1.5rem;">Tino's Games - Settings</h1>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="games.html" class="nav-link">Games</a>
+            <a href="risky-games.html" class="nav-link">Risky Games</a>
+            <a href="settings.html" class="nav-link">Settings</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="settings-container">
+            <h2 class="settings-title">Settings</h2>
+
+            <div class="toggle">
+                <label for="about-blank-toggle">Enable About:Blank Embeds</label>
+                <input type="checkbox" id="about-blank-toggle">
+            </div>
+
+            <button class="save-button" onclick="saveSettings()">Save Settings</button>
+        </div>
+    </main>
+
+    <script>
+        /**
+         * Save the user's settings to localStorage.
+         */
+        function saveSettings() {
+            const aboutBlankEnabled = document.getElementById('about-blank-toggle').checked;
+            localStorage.setItem('aboutBlankEnabled', aboutBlankEnabled);
+            alert('Settings saved!');
+        }
+
+        /**
+         * Load the user's settings from localStorage on page load.
+         */
+        function loadSettings() {
+            const aboutBlankEnabled = localStorage.getItem('aboutBlankEnabled') === 'true';
+            document.getElementById('about-blank-toggle').checked = aboutBlankEnabled;
+        }
+
+        // Load settings when the page loads
+        window.onload = loadSettings;
+    </script>
+</body>
+</html>
