@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Play Risky Games - Games that may be challenging, experimental, or adventurous!">
+    <meta name="keywords" content="Risky Games, Unblocked Games, Adventure, Experimental Games, Tino's Games">
+    <meta name="author" content="Tino">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risky Games - Tino's Games</title>
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: linear-gradient(135deg, #2c003e, #000); /* Purple gradient background */
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #a855f7; /* Purple hover color */
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #fff;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-description {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+
+        /* Risky Games Section */
+        .games-section {
+            padding: 2rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid layout */
+            gap: 1.5rem; /* Space between grid items */
+            padding: 0 1rem; /* Add padding to the grid */
+        }
+
+        .game-card {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for cards */
+            border: 2px solid #ff4500; /* Orange border for Risky Games */
+            border-radius: 10px;
+            padding: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color */
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px); /* Hover effect */
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.5); /* Orange shadow */
+        }
+
+        .game-image {
+            width: 100%; /* Scale image to fit within the card */
+            height: auto;
+            max-height: 120px; /* Ensure the images don't grow too large */
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+            object-fit: cover; /* Ensure images are cropped nicely */
+        }
+
+        .game-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ff4500; /* Orange font color */
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="favicon.jpeg" alt="Tino's Games Logo" class="logo-image">
+    </div>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="games.html" class="nav-link">Games</a>
+        <a href="risky-games.html" class="nav-link">Risky Games</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <h1 class="hero-title">Risky Games</h1>
+        <p class="hero-description">Dare to play? These games are challenging, experimental, or adventurous!</p>
+    </section>
+
+    <section id="games-section" class="games-section">
+        <h2 class="section-title">Available Risky Games</h2>
+        <div class="games-grid" id="game-links">
+            <!-- Add your risky games here -->
+            <a href="javascript:void(0);" onclick="openGame('https://blooketbot.glitch.me/')" class="game-card">
+                <img src="blooket.png" alt="Blooket Cheats" class="game-image">
+                <p class="game-title">Blooket Bot</p>
+            </a>
+            
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Tino's Games. All rights reserved.</p>
+</footer>
+
+<script>
+    // Function to open games in a new tab
+    function openGame(page) {
+        const newWindow = window.open('about:blank');
+        newWindow.location.href = page;
+    }
+</script>
+
+</body>
+</html>
