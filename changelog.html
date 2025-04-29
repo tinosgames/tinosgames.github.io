@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - Tino's Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c003e, #000);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #a855f7; /* Purple hover effect */
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .changelog-container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .changelog-entry {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid #a855f7;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .changelog-title {
+            font-size: 1.5rem;
+            color: #a855f7;
+            margin-bottom: 0.5rem;
+        }
+
+        .changelog-date {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+
+        .changelog-description {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 style="margin: 0; font-size: 1.5rem;">Tino's Games - Changelog</h1>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="games.html" class="nav-link">Games</a>
+            <a href="settings.html" class="nav-link">Settings</a>
+            <a href="changelog.html" class="nav-link">Changelog</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Changelog</h1>
+        <div class="changelog-container">
+            <!-- Example changelog entries -->
+            <div class="changelog-entry">
+                <h2 class="changelog-title">Version 2.0.0 - Major Update</h2>
+                <p class="changelog-date">April 29, 2025</p>
+                <p class="changelog-description">
+                    - Added new games: "Geometry Dash", "Temple Run 2", and "Snow Rider 3D".<br>
+                    - Introduced the new settings page for enabling/disabling about:blank embeds.<br>
+                    - Improved UI responsiveness and performance.<br>
+                    - Fixed several bugs in game loading logic.
+                </p>
+            </div>
+            <div class="changelog-entry">
+                <h2 class="changelog-title">Version 1.5.0 - Search Engine Added</h2>
+                <p class="changelog-date">April 15, 2025</p>
+                <p class="changelog-description">
+                    - Added a built-in search engine for finding games quickly.<br>
+                    - Integrated proxy functionality for bypassing restrictions.<br>
+                    - Updated navigation bar to include links to the new features.
+                </p>
+            </div>
+            <div class="changelog-entry">
+                <h2 class="changelog-title">Version 1.0.0 - Initial Release</h2>
+                <p class="changelog-date">April 1, 2025</p>
+                <p class="changelog-description">
+                    - Launched Tino's Games with 30+ games included.<br>
+                    - Features: Responsive design, game grid layout, and browser compatibility.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
