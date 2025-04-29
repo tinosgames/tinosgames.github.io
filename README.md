@@ -44,36 +44,13 @@ Learn more about the mission and vision of Tino's Games.
 Reach out to us via the contact form for support, feedback, or inquiries.
 
 ### 🛡️ `proxy.html` - Proxy Page
-Access restricted websites securely and freely (coming soon).
+Access restricted websites securely and freely.
 
----
-
-## 🚀 How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/tinosgames/tinos-games.git
-   ```
-2. Open `index.html` in your browser.
-3. Navigate through the menu bar to explore games, learn about the project, or contact us.
 
 ---
 
 ## 🤝 Contributing
-We welcome contributions! To contribute:
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add new feature"
-   ```
-4. Push to your branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
+We do not allow contributations. Its not for us, and I like what I have done with this website. Please do not copy this repo and claim it as yours. 
 
 ---
 
