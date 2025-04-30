@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Tino's Games</title>
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c003e, #000);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #a855f7;
+        }
+
+        /* Games Grid */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .game-card {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid #a855f7;
+            border-radius: 10px;
+            padding: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(168, 85, 247, 0.5);
+        }
+
+        .game-image {
+            width: 100%;
+            height: auto;
+            max-height: 120px;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+        }
+
+        .game-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #a855f7;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="favicon.jpeg" alt="Tino's Games Logo" class="logo-image" id="favicon">
+    </div>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="games.html" class="nav-link">Games</a>
+        <a href="settings.html" class="nav-link">Settings</a>
+        <a href="changelog.html" class="nav-link">Changelog</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Games</h1>
+    <p>Click on a game to start playing!</p>
+
+    <div class="games-grid">
+  <a href="javascript:void(0);" onclick="openGame('1v1.lol', 'https://example.com/1v1-lol')" class="game-card">
+            <img src="1v1_lol_image.jpg" alt="1v1.LOL Game" class="game-image">
+            <p class="game-title">1v1.LOL</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('2048', 'https://example.com/2048')" class="game-card">
+            <img src="2048.jpg" alt="2048 Game" class="game-image">
+            <p class="game-title">2048</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('amongus.html', 'https://example.com/amongus')" class="game-card">
+            <img src="amongus.jpeg" alt="Among Us Game" class="game-image">
+            <p class="game-title">Among Us</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('basketrandom', 'https://tinosgames.github.io/basketrandom')" class="game-card">
+            <img src="basket_random_image.jpg" alt="Basket Random Game" class="game-image">
+            <p class="game-title">Basket Random</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('bitlife', 'https://tinosgames.github.io/bitlife')" class="game-card">
+            <img src="bit_life_image.jpg" alt="BitLife Game" class="game-image">
+            <p class="game-title">BitLife</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('blockblast', 'https://tinosgames.github.io/blockblast')" class="game-card">
+            <img src="blockblast.png" alt="Block Blast Game" class="game-image">
+            <p class="game-title">Block Blast</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('bottle.html', 'https://tinosgames.github.io/bottle')" class="game-card">
+            <img src="bottle.png" alt="Bottle Flip 3D Game" class="game-image">
+            <p class="game-title">Bottle Flip 3D</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('brawl-stars-project-laser', 'https://tinosgames.github.io/brawl-stars-project-laser')" class="game-card">
+            <img src="brawl_stars_project_laser_image.jpg" alt="Brawl Stars Project Laser Game" class="game-image">
+            <p class="game-title">Brawl Stars Project Laser</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('boxingrandom', 'https://tinosgames.github.io/boxingrandom')" class="game-card">
+            <img src="boxing_random_image.jpg" alt="Boxing Random Game" class="game-image">
+            <p class="game-title">Boxing Random</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('chromedino', 'https://tinosgames.github.io/chromedino')" class="game-card">
+            <img src="chrome_dino_image.jpg" alt="Chrome Dino Game" class="game-image">
+            <p class="game-title">Chrome Dino</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('cookieclicker', 'https://tinosgames.github.io/cookieclicker')" class="game-card">
+            <img src="cookie_clicker_image.jpg" alt="Cookie Clicker Game" class="game-image">
+            <p class="game-title">Cookie Clicker</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('crossy-road', 'https://tinosgames.github.io/crossy-road')" class="game-card">
+            <img src="crossy_road_image.jpg" alt="Crossy Road Game" class="game-image">
+            <p class="game-title">Crossy Road</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('drive-mad', 'https://tinosgames.github.io/drive-mad')" class="game-card">
+            <img src="drive_mad_image.jpg" alt="Drive Mad Game" class="game-image">
+            <p class="game-title">Drive Mad</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('drift-boss', 'https://tinosgames.github.io/drift-boss')" class="game-card">
+            <img src="driftboss.jpg" alt="Drift Boss Game" class="game-image">
+            <p class="game-title">Drift Boss</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('doodle-jump.html', 'https://tinosgames.github.io/doodle-jump')" class="game-card">
+            <img src="doodlejump.png" alt="Doodle Jump Game" class="game-image">
+            <p class="game-title">Doodle Jump</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('eggycar', 'https://tinosgames.github.io/eggycar')" class="game-card">
+            <img src="eggycar_image.jpg" alt="Eggy Car Game" class="game-image">
+            <p class="game-title">Eggy Car</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('flappybird', 'https://tinosgames.github.io/flappybird')" class="game-card">
+            <img src="flappy_bird_image.jpg" alt="Flappy Bird Game" class="game-image">
+            <p class="game-title">Flappy Bird</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('fnaf-1', 'https://tinosgames.github.io/fnaf-1')" class="game-card">
+            <img src="FNAF1.png" alt="FNAF 1 Game" class="game-image">
+            <p class="game-title">FNAF 1</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('eaglercraft', 'https://tinosgames.github.io/eaglercraft')" class="game-card">
+            <img src="eaglercraft_image.jpg" alt="Minecraft Game" class="game-image">
+            <p class="game-title">Minecraft</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('geometrydash', 'https://tinosgames.github.io/geometrydash')" class="game-card">
+            <img src="geometry_dash_image.jpg" alt="Geometry Dash Game" class="game-image">
+            <p class="game-title">Geometry Dash</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('google-feud', 'https://tinosgames.github.io/google-feud')" class="game-card">
+            <img src="google-feud.png" alt="Google Feud Game" class="game-image">
+            <p class="game-title">Google Feud</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('hackertype', 'https://tinosgames.github.io/hackertype')" class="game-card">
+            <img src="hackertype.png" alt="Hacker Type Game" class="game-image">
+            <p class="game-title">Hacker Type</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('motox3m2', 'https://tinosgames.github.io/motox3m2')" class="game-card">
+            <img src="motox3m_image.jpg" alt="Moto X3M 2 Game" class="game-image">
+            <p class="game-title">Moto X3M 2</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('paperio2', 'https://tinosgames.github.io/paperio2')" class="game-card">
+            <img src="paperio.jpg" alt="Paper IO 2 Game" class="game-image">
+            <p class="game-title">Paper IO 2</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('pacman', 'https://tinosgames.github.io/pacman')" class="game-card">
+            <img src="pac_man_image.jpg" alt="Pac-Man Game" class="game-image">
+            <p class="game-title">Pac-Man</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('mario-game', 'https://tinosgames.github.io/mario-game')" class="game-card">
+            <img src="retro_bowl_image.jpg" alt="Retro Bowl Game" class="game-image">
+            <p class="game-title">Retro Bowl</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('retrobowl', 'https://tinosgames.github.io/retrobowl')" class="game-card">
+            <img src="slope_image.jpg" alt="Slope Game" class="game-image">
+            <p class="game-title">Slope</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('snake', 'https://tinosgames.github.io/snake')" class="game-card">
+            <img src="snake_image.jpg" alt="Snake Game" class="game-image">
+            <p class="game-title">Snake</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('snowrider3d', 'https://tinosgames.github.io/snowrider3d')" class="game-card">
+            <img src="snow_rider_3d_image.jpg" alt="Snow Rider 3D Game" class="game-image">
+            <p class="game-title">Snow Rider 3D</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('stack', 'https://tinosgames.github.io/stack')" class="game-card">
+            <img src="stack.png" alt="Stack Game" class="game-image">
+            <p class="game-title">Stack</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('stickman-hook', 'https://tinosgames.github.io/stickman-hook')" class="game-card">
+            <img src="stickmanhook.jpg" alt="Stick Man Hook Game" class="game-image">
+            <p class="game-title">Stick Man Hook</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('subway-surfers', 'https://tinosgames.github.io/subway-surfers')" class="game-card">
+            <img src="subway_surfers_image.jpg" alt="Subway Surfers Game" class="game-image">
+            <p class="game-title">Subway Surfers</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('tunnelrush', 'https://tinosgames.github.io/tunnelrush')" class="game-card">
+            <img src="tunnel_rush_image.jpg" alt="Tunnel Rush Game" class="game-image">
+            <p class="game-title">Tunnel Rush</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('temple-run-2', 'https://tinosgames.github.io/temple-run-2')" class="game-card">
+            <img src="templerun.jpg" alt="Temple Run Game" class="game-image">
+            <p class="game-title">Temple Run</p>
+        </a>
+        <a href="javascript:void(0);" onclick="openGame('volleyrandom', 'https://tinosgames.github.io/volleyrandom')" class="game-card">
+            <img src="volley_random_image.jpg" alt="Volley Random Game" class="game-image">
+            <p class="game-title">Volley Random</p>
+        </a>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Tino's Games. All rights reserved.</p>
+</footer>
+
+<script>
+    /**
+     * Opens a game based on user settings.
+     * @param {string} fileUrl - The local file URL to open the game directly.
+     * @param {string} embedUrl - The URL to embed the game in an `about:blank` page.
+     */
+    function openGame(fileUrl, embedUrl) {
+        const aboutBlankEnabled = localStorage.getItem('aboutBlankEnabled') === 'true';
+
+        if (aboutBlankEnabled) {
+            const newTab = window.open('about:blank');
+            if (newTab) {
+                newTab.document.write(`
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Game</title>
+                        <style>
+                            body {
+                                margin: 0;
+                                background-color: black;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100vh;
+                                overflow: hidden;
+                            }
+                            iframe {
+                                border: none;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <iframe src="${embedUrl}" allowfullscreen></iframe>
+                    </body>
+                    </html>
+                `);
+                newTab.document.close();
+            } else {
+                alert('Pop-ups are blocked. Please allow pop-ups for this website.');
+            }
+        } else {
+            window.location.href = fileUrl;
+        }
+    }
+</script>
+
+</body>
+</html>
