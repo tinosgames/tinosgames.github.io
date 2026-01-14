@@ -3,210 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Games - Tinos Games</title>
-<link rel="icon" type="image/x-icon" href="favicon.jpeg">
+<title>TINOS GAMES • Space Noir</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
+:root{
+  --bg:#05070b;
+  --panel:#0b0f1a;
+  --ink:#e7ecff;
+  --muted:#8b93c7;
+  --neon:#6cf2ff;
+  --accent:#7a6cff;
+}
+*{box-sizing:border-box}
 body{
-    font-family:Arial,sans-serif;
-    background:radial-gradient(circle at top,#0a1a2f 0%,#000814 45%,#000 100%);
-    color:#e6f1ff;
-    text-align:center;
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 600px at 70% -10%, rgba(122,108,255,.18), transparent 60%),
+    radial-gradient(900px 500px at 10% 10%, rgba(108,242,255,.18), transparent 55%),
+    linear-gradient(180deg,#02030a,#05070b 40%,#02030a);
 }
 
-/* HEADER */
-.header{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:1.5rem;
-    padding:2rem 1rem 1rem;
-    background:rgba(0,8,20,.9);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid rgba(0,170,255,.25);
-    position:sticky;
-    top:0;
-    z-index:1000;
+.stars,.stars:after{
+  position:fixed; inset:0; content:""; pointer-events:none;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px,#fff,transparent 40%),
+    radial-gradient(1px 1px at 80px 120px,#cfe7ff,transparent 40%),
+    radial-gradient(1.5px 1.5px at 140px 90px,#fff,transparent 40%);
+  animation:drift 160s linear infinite;
+  opacity:.5;
+}
+.stars:after{animation-duration:240s;opacity:.3}
+@keyframes drift{to{transform:translateY(-1000px)}}
+
+header{
+  position:sticky;top:0;z-index:10;
+  backdrop-filter:blur(8px);
+  background:linear-gradient(180deg,rgba(5,7,11,.85),rgba(5,7,11,.2));
+  border-bottom:1px solid rgba(108,242,255,.15);
 }
 
-/* ASCII */
-.ascii-container{
-    width:100%;
-    padding-bottom:1.5rem;
-    border-bottom:1px solid rgba(0,170,255,.25);
-}
-.ascii-text{
-    font-family:"Courier New",monospace;
-    font-size:clamp(.55rem,.9vw,.85rem);
-    line-height:1.15;
-    color:#cfe9ff;
-    white-space:pre;
-    text-shadow:0 0 6px rgba(0,170,255,.6),0 0 18px rgba(0,170,255,.35);
+.ascii{
+  padding:26px 10px;
+  text-align:center;
+  font-family:"Courier New",monospace;
+  font-size:clamp(.55rem,.9vw,.85rem);
+  line-height:1.15;
+  color:#cfe9ff;
+  white-space:pre;
+  text-shadow:0 0 6px rgba(108,242,255,.6),0 0 18px rgba(108,242,255,.35);
 }
 
-/* NAV */
-.navbar{
-    display:flex;
-    gap:1.2rem;
-    flex-wrap:wrap;
-    justify-content:center;
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
 }
-.nav-link{
-    color:#9bdcff;
-    text-decoration:none;
-    font-weight:bold;
-}
-.nav-link:hover{
-    color:#00aaff;
-    text-shadow:0 0 8px rgba(0,170,255,.8);
-}
+.nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+.nav a:hover{color:var(--ink)}
 
-/* MAIN */
-main{margin-top:2.5rem}
-h1{
-    font-size:2.5rem;
-    text-shadow:0 0 12px rgba(0,170,255,.6);
+.hero{
+  max-width:1200px;
+  margin:50px auto 20px;
+  padding:20px;
 }
-p{color:#a9cfff}
+h1{margin:0 0 10px;font-size:clamp(32px,4vw,52px)}
+p{color:var(--muted)}
 
-/* GRID */
-.games-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:1.5rem;
-    padding:2.5rem 2rem 3rem;
+.grid{
+  max-width:1200px;
+  margin:30px auto 80px;
+  padding:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
 }
+.game{
+  background:linear-gradient(180deg,rgba(11,15,26,.85),rgba(11,15,26,.6));
+  border:1px solid rgba(122,108,255,.2);
+  border-radius:14px;
+  padding:16px;
+  text-decoration:none;
+  color:inherit;
+  transition:.2s;
+}
+.game:hover{
+  transform:translateY(-4px);
+  box-shadow:0 0 30px rgba(108,242,255,.25);
+}
+.game h3{margin:0 0 6px;font-size:1rem}
+.meta{font-size:.85rem;color:var(--muted)}
 
-.game-card{
-    background:linear-gradient(160deg,rgba(5,20,40,.95),rgba(0,5,15,.95));
-    border:1px solid rgba(0,170,255,.35);
-    border-radius:12px;
-    padding:1rem;
-    text-decoration:none;
-    color:inherit;
-    transition:.3s;
-}
-.game-card:hover{
-    transform:translateY(-6px) scale(1.02);
-    border-color:#00aaff;
-    box-shadow:0 0 25px rgba(0,170,255,.6);
-}
-
-.game-image{
-    width:100%;
-    max-height:120px;
-    border-radius:10px;
-    object-fit:cover;
-    margin-bottom:.5rem;
-}
-.game-title{
-    font-weight:bold;
-    color:#8fd3ff;
-}
-
-/* FOOTER */
-.footer{
-    background:rgba(0,8,20,.9);
-    border-top:1px solid rgba(0,170,255,.25);
-    padding:1rem;
+footer{
+  border-top:1px solid rgba(122,108,255,.18);
+  padding:20px;
+  text-align:center;
+  color:var(--muted);
 }
 </style>
 </head>
 
 <body>
+<div class="stars"></div>
 
-<header class="header">
-<div class="ascii-container">
-<pre class="ascii-text">
+<header>
+<pre class="ascii">
 ___________.___ _______   ________    _________   ________    _____      _____  ___________ _________
 \__    ___/|   |\      \  \_____  \  /   _____/  /  _____/   /  _  \    /     \ \_   _____//   _____/
-  |    |   |   |/   |   \  /   |   \ \_____  \  /   \  ___  /  /_\  \  /  \ /  \ |    __)_ \_____  \ 
+  |    |   |   |/   |   \  /   |   \ \_____  \  /   \  ___  /  /_\  \  /  \ /  \ |    __)_ \_____  \
   |    |   |   /    |    \/    |    \/        \ \    \_\  \/    |    \/    Y    \|        \/        \
   |____|   |___\____|__  /\_______  /_______  /  \______  /\____|__  /\____|__  /_______  /_______  /
                        \/         \/        \/          \/         \/         \/        \/        \/
 </pre>
-</div>
 
-<nav class="navbar">
-<a href="index.html" class="nav-link">Home</a>
-<a href="games.html" class="nav-link">Games</a>
-<a href="https://monkey.nordparrot.ro/worksheets/search.html" class="nav-link">Proxy</a>
-<a href="about.html" class="nav-link">About</a>
-<a href="contact.html" class="nav-link">Contact</a>
-<a href="risky-games.html" class="nav-link">Risky</a>
-<a href="settings.html" class="nav-link">Settings</a>
-</nav>
+<div class="nav">
+<strong>TINOS GAMES</strong>
+<div>
+<a href="#games">Games</a>
+</div>
+</div>
 </header>
 
-<main>
-<h1>Games</h1>
-<p>Click on a game to start playing!</p>
+<section class="hero">
+<h1>Cold Space. Hot Games.</h1>
+<p>Every working link from the original hub, rebuilt in a clean Space-Noir layout.</p>
+</section>
 
-<div class="games-grid">
+<section id="games" class="grid">
 
-<a onclick="openGame('1v1.lol','https://example.com/1v1-lol')" class="game-card"><img src="1v1_lol_image.jpg" class="game-image"><p class="game-title">1v1.LOL</p></a>
-<a onclick="openGame('2048','https://example.com/2048')" class="game-card"><img src="2048.jpg" class="game-image"><p class="game-title">2048</p></a>
-<a onclick="openGame('amongus.html','https://example.com/amongus')" class="game-card"><img src="amongus.jpeg" class="game-image"><p class="game-title">Among Us</p></a>
-<a onclick="openGame('basketrandom','https://tinosgames.github.io/basketrandom')" class="game-card"><img src="basket_random_image.jpg" class="game-image"><p class="game-title">Basket Random</p></a>
-<a onclick="openGame('bitlife','https://tinosgames.github.io/bitlife')" class="game-card"><img src="bit_life_image.jpg" class="game-image"><p class="game-title">BitLife</p></a>
-<a onclick="openGame('blockblast','https://tinosgames.github.io/blockblast')" class="game-card"><img src="blockblast.png" class="game-image"><p class="game-title">Block Blast</p></a>
-<a onclick="openGame('bottle.html','https://tinosgames.github.io/bottle')" class="game-card"><img src="bottle.png" class="game-image"><p class="game-title">Bottle Flip 3D</p></a>
-<a onclick="openGame('bobrobber4.html','https://tinosgames.github.io/bobrobber4.html')" class="game-card"><img src="https://webglmath.github.io/bob-the-robber-4/logo.png" class="game-image"><p class="game-title">Bob The Robber 4</p></a>
-<a onclick="openGame('brawl-stars-project-laser','https://tinosgames.github.io/brawl-stars-project-laser')" class="game-card"><img src="brawl_stars_project_laser_image.jpg" class="game-image"><p class="game-title">Brawl Stars Project Laser</p></a>
-<a onclick="openGame('boxingrandom','https://tinosgames.github.io/boxingrandom')" class="game-card"><img src="boxing_random_image.jpg" class="game-image"><p class="game-title">Boxing Random</p></a>
-<a onclick="openGame('chromedino','https://tinosgames.github.io/chromedino')" class="game-card"><img src="chrome_dino_image.jpg" class="game-image"><p class="game-title">Chrome Dino</p></a>
-<a onclick="openGame('cookieclicker','https://tinosgames.github.io/cookieclicker')" class="game-card"><img src="cookie_clicker_image.jpg" class="game-image"><p class="game-title">Cookie Clicker</p></a>
-<a onclick="openGame('crossy-road','https://tinosgames.github.io/crossy-road')" class="game-card"><img src="crossy_road_image.jpg" class="game-image"><p class="game-title">Crossy Road</p></a>
-<a onclick="openGame('drive-mad','https://tinosgames.github.io/drive-mad')" class="game-card"><img src="drive_mad_image.jpg" class="game-image"><p class="game-title">Drive Mad</p></a>
-<a onclick="openGame('https://tinosgames.github.io/diddydinos','https://tinosgames.github.io/diddydinos')" class="game-card"><img src="diddydinos.png" class="game-image"><p class="game-title">Diddy Dinos</p></a>
-<a onclick="openGame('drift-boss','https://tinosgames.github.io/drift-boss')" class="game-card"><img src="driftboss.jpg" class="game-image"><p class="game-title">Drift Boss</p></a>
-<a onclick="openGame('doodle-jump.html','https://tinosgames.github.io/doodle-jump')" class="game-card"><img src="doodlejump.png" class="game-image"><p class="game-title">Doodle Jump</p></a>
-<a onclick="openGame('eggycar','https://tinosgames.github.io/eggycar')" class="game-card"><img src="eggycar_image.jpg" class="game-image"><p class="game-title">Eggy Car</p></a>
-<a onclick="openGame('flappybird','https://tinosgames.github.io/flappybird')" class="game-card"><img src="flappy_bird_image.jpg" class="game-image"><p class="game-title">Flappy Bird</p></a>
-<a onclick="openGame('fnaf-1','https://tinosgames.github.io/fnaf-1')" class="game-card"><img src="FNAF1.png" class="game-image"><p class="game-title">FNAF 1</p></a>
-<a onclick="openGame('eaglercraft','https://tinosgames.github.io/eaglercraft')" class="game-card"><img src="eaglercraft_image.jpg" class="game-image"><p class="game-title">Minecraft</p></a>
-<a onclick="openGame('mrbullet.html','https://tinosgames.github.io/mrbullet.html')" class="game-card"><img src="https://webglmath.github.io/mr-bullet/logo.png" class="game-image"><p class="game-title">Mr Bullet</p></a>
-<a onclick="openGame('parkour.html','https://tinosgames.github.io/parkour.html')" class="game-card"><img src="https://ubg77.github.io/fix/parkour-race/logo.png" class="game-image"><p class="game-title">Parkour Race</p></a>
-<a onclick="openGame('geometrydash','https://tinosgames.github.io/geometrydash')" class="game-card"><img src="geometry_dash_image.jpg" class="game-image"><p class="game-title">Geometry Dash</p></a>
-<a onclick="openGame('google-feud','https://tinosgames.github.io/google-feud')" class="game-card"><img src="google-feud.png" class="game-image"><p class="game-title">Google Feud</p></a>
-<a onclick="openGame('hackertype','https://tinosgames.github.io/hackertype')" class="game-card"><img src="hackertype.png" class="game-image"><p class="game-title">Hacker Type</p></a>
-<a onclick="openGame('motox3m2','https://tinosgames.github.io/motox3m2')" class="game-card"><img src="motox3m_image.jpg" class="game-image"><p class="game-title">Moto X3M 2</p></a>
-<a onclick="openGame('paperio2','https://tinosgames.github.io/paperio2')" class="game-card"><img src="paperio.jpg" class="game-image"><p class="game-title">Paper IO 2</p></a>
-<a onclick="openGame('pacman','https://tinosgames.github.io/pacman')" class="game-card"><img src="pac_man_image.jpg" class="game-image"><p class="game-title">Pac-Man</p></a>
-<a onclick="openGame('retrobowl','https://tinosgames.github.io/retrobowl')" class="game-card"><img src="retro_bowl_image.jpg" class="game-image"><p class="game-title">Retro Bowl</p></a>
-<a onclick="openGame('mario-game','https://tinosgames.github.io/mario-game')" class="game-card"><img src="mario_64_image.jpg" class="game-image"><p class="game-title">Mario Game</p></a>
-<a onclick="openGame('slope1.html','https://tinosgames.github.io/slope1.html')" class="game-card"><img src="slope_image.jpg" class="game-image"><p class="game-title">Slope</p></a>
-<a onclick="openGame('snake','https://tinosgames.github.io/snake')" class="game-card"><img src="snake_image.jpg" class="game-image"><p class="game-title">Snake</p></a>
-<a onclick="openGame('snowrider3d','https://tinosgames.github.io/snowrider3d')" class="game-card"><img src="snow_rider_3d_image.jpg" class="game-image"><p class="game-title">Snow Rider 3D</p></a>
-<a onclick="openGame('stack','https://tinosgames.github.io/stack')" class="game-card"><img src="stack.png" class="game-image"><p class="game-title">Stack</p></a>
-<a onclick="openGame('stickman-hook','https://tinosgames.github.io/stickman-hook')" class="game-card"><img src="stickmanhook.jpg" class="game-image"><p class="game-title">Stick Man Hook</p></a>
-<a onclick="openGame('stackbounce.html','stackbounce.html')" class="game-card"><img src="https://webglmath.github.io/stackbounce/logo.png" class="game-image"><p class="game-title">Stack Bounce</p></a>
-<a onclick="openGame('subway-surfers','https://tinosgames.github.io/subway-surfers')" class="game-card"><img src="subway_surfers_image.jpg" class="game-image"><p class="game-title">Subway Surfers</p></a>
-<a onclick="openGame('tunnelrush','https://tinosgames.github.io/tunnelrush')" class="game-card"><img src="tunnel_rush_image.jpg" class="game-image"><p class="game-title">Tunnel Rush</p></a>
-<a onclick="openGame('temple-run-2','https://tinosgames.github.io/temple-run-2')" class="game-card"><img src="templerun.jpg" class="game-image"><p class="game-title">Temple Run</p></a>
-<a onclick="openGame('taptapshots.html','https://tinosgames.github.io/taptapshots')" class="game-card"><img src="https://ubg77.github.io/game131022/tap-tap-shots/logo.png" class="game-image"><p class="game-title">Tap Tap Shots</p></a>
-<a onclick="openGame('volleyrandom','https://tinosgames.github.io/volleyrandom')" class="game-card"><img src="volley_random_image.jpg" class="game-image"><p class="game-title">Volley Random</p></a>
+<a class="game" href="https://example.com/1v1-lol" target="_blank"><h3>1v1.LOL</h3><div class="meta">Shooter</div></a>
+<a class="game" href="https://example.com/2048" target="_blank"><h3>2048</h3><div class="meta">Puzzle</div></a>
+<a class="game" href="https://example.com/amongus" target="_blank"><h3>Among Us</h3><div class="meta">Party</div></a>
+<a class="game" href="https://tinosgames.github.io/basketrandom" target="_blank"><h3>Basket Random</h3><div class="meta">Sports</div></a>
+<a class="game" href="https://tinosgames.github.io/bitlife" target="_blank"><h3>BitLife</h3><div class="meta">Simulation</div></a>
+<a class="game" href="https://tinosgames.github.io/blockblast" target="_blank"><h3>Block Blast</h3><div class="meta">Puzzle</div></a>
+<a class="game" href="https://tinosgames.github.io/bottle" target="_blank"><h3>Bottle Flip 3D</h3><div class="meta">Arcade</div></a>
+<a class="game" href="https://tinosgames.github.io/bobrobber4.html" target="_blank"><h3>Bob The Robber 4</h3><div class="meta">Stealth</div></a>
+<a class="game" href="https://tinosgames.github.io/brawl-stars-project-laser" target="_blank"><h3>Brawl Stars Laser</h3><div class="meta">Action</div></a>
+<a class="game" href="https://tinosgames.github.io/boxingrandom" target="_blank"><h3>Boxing Random</h3><div class="meta">Sports</div></a>
+<a class="game" href="https://tinosgames.github.io/chromedino" target="_blank"><h3>Chrome Dino</h3><div class="meta">Endless</div></a>
+<a class="game" href="https://tinosgames.github.io/cookieclicker" target="_blank"><h3>Cookie Clicker</h3><div class="meta">Idle</div></a>
+<a class="game" href="https://tinosgames.github.io/crossy-road" target="_blank"><h3>Crossy Road</h3><div class="meta">Arcade</div></a>
+<a class="game" href="https://tinosgames.github.io/drive-mad" target="_blank"><h3>Drive Mad</h3><div class="meta">Driving</div></a>
+<a class="game" href="https://tinosgames.github.io/diddydinos" target="_blank"><h3>Diddy Dinos</h3><div class="meta">Arcade</div></a>
+<a class="game" href="https://tinosgames.github.io/drift-boss" target="_blank"><h3>Drift Boss</h3><div class="meta">Driving</div></a>
+<a class="game" href="https://tinosgames.github.io/doodle-jump" target="_blank"><h3>Doodle Jump</h3><div class="meta">Platformer</div></a>
+<a class="game" href="https://tinosgames.github.io/eggycar" target="_blank"><h3>Eggy Car</h3><div class="meta">Driving</div></a>
+<a class="game" href="https://tinosgames.github.io/flappybird" target="_blank"><h3>Flappy Bird</h3><div class="meta">Arcade</div></a>
+<a class="game" href="https://tinosgames.github.io/fnaf-1" target="_blank"><h3>FNAF 1</h3><div class="meta">Horror</div></a>
+<a class="game" href="https://tinosgames.github.io/eaglercraft" target="_blank"><h3>Minecraft</h3><div class="meta">Sandbox</div></a>
+<a class="game" href="https://tinosgames.github.io/mrbullet.html" target="_blank"><h3>Mr Bullet</h3><div class="meta">Shooter</div></a>
+<a class="game" href="https://tinosgames.github.io/geometrydash" target="_blank"><h3>Geometry Dash</h3><div class="meta">Rhythm</div></a>
+<a class="game" href="https://tinosgames.github.io/google-feud" target="_blank"><h3>Google Feud</h3><div class="meta">Trivia</div></a>
+<a class="game" href="https://tinosgames.github.io/hackertype" target="_blank"><h3>Hacker Type</h3><div class="meta">Typing</div></a>
+<a class="game" href="https://tinosgames.github.io/motox3m2" target="_blank"><h3>Moto X3M 2</h3><div class="meta">Racing</div></a>
+<a class="game" href="https://tinosgames.github.io/paperio2" target="_blank"><h3>Paper IO 2</h3><div class="meta">Multiplayer</div></a>
+<a class="game" href="https://tinosgames.github.io/pacman" target="_blank"><h3>Pac-Man</h3><div class="meta">Classic</div></a>
+<a class="game" href="https://tinosgames.github.io/retrobowl" target="_blank"><h3>Retro Bowl</h3><div class="meta">Sports</div></a>
+<a class="game" href="https://tinosgames.github.io/mario-game" target="_blank"><h3>Mario Game</h3><div class="meta">Platformer</div></a>
+<a class="game" href="https://tinosgames.github.io/slope1.html" target="_blank"><h3>Slope</h3><div class="meta">Endless</div></a>
+<a class="game" href="https://tinosgames.github.io/snake" target="_blank"><h3>Snake</h3><div class="meta">Classic</div></a>
+<a class="game" href="https://tinosgames.github.io/snowrider3d" target="_blank"><h3>Snow Rider 3D</h3><div class="meta">Sports</div></a>
+<a class="game" href="https://tinosgames.github.io/stack" target="_blank"><h3>Stack</h3><div class="meta">Arcade</div></a>
+<a class="game" href="https://tinosgames.github.io/stickman-hook" target="_blank"><h3>Stickman Hook</h3><div class="meta">Arcade</div></a>
+<a class="game" href="https://tinosgames.github.io/subway-surfers" target="_blank"><h3>Subway Surfers</h3><div class="meta">Runner</div></a>
+<a class="game" href="https://tinosgames.github.io/tunnelrush" target="_blank"><h3>Tunnel Rush</h3><div class="meta">Reflex</div></a>
+<a class="game" href="https://tinosgames.github.io/temple-run-2" target="_blank"><h3>Temple Run</h3><div class="meta">Runner</div></a>
+<a class="game" href="https://tinosgames.github.io/taptapshots" target="_blank"><h3>Tap Tap Shots</h3><div class="meta">Sports</div></a>
+<a class="game" href="https://tinosgames.github.io/volleyrandom" target="_blank"><h3>Volley Random</h3><div class="meta">Sports</div></a>
 
-</div>
-</main>
+</section>
 
-<footer class="footer">
-<p>&copy; 2025 Tinos Games. All rights reserved.</p>
+<footer>
+© 2026 TINOS GAMES • Built in the dark
 </footer>
-
-<script>
-function openGame(fileUrl, embedUrl){
-    const aboutBlankEnabled = localStorage.getItem('aboutBlankEnabled') === 'true';
-    if(aboutBlankEnabled){
-        const t=window.open('about:blank');
-        t.document.write(`<iframe src="${embedUrl}" style="border:none;width:100vw;height:100vh"></iframe>`);
-    }else{
-        window.location.href=fileUrl;
-    }
-}
-</script>
 
 </body>
 </html>
