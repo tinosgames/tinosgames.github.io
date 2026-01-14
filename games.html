@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TINOS GAMES • Space Noir</title>
+<title>TINOS GAMES • Games Hub</title>
 
 <style>
 :root{
@@ -44,7 +44,8 @@ header{
   border-bottom:1px solid rgba(108,242,255,.15);
 }
 
-.ascii{
+.ascii-link{
+  display:block;
   padding:26px 10px;
   text-align:center;
   font-family:"Courier New",monospace;
@@ -53,6 +54,7 @@ header{
   color:#cfe9ff;
   white-space:pre;
   text-shadow:0 0 6px rgba(108,242,255,.6),0 0 18px rgba(108,242,255,.35);
+  text-decoration:none;
 }
 
 .nav{
@@ -110,30 +112,29 @@ footer{
 <div class="stars"></div>
 
 <header>
-<pre class="ascii">
+<a href="index.html" class="ascii-link">
 ___________.___ _______   ________    _________   ________    _____      _____  ___________ _________
 \__    ___/|   |\      \  \_____  \  /   _____/  /  _____/   /  _  \    /     \ \_   _____//   _____/
   |    |   |   |/   |   \  /   |   \ \_____  \  /   \  ___  /  /_\  \  /  \ /  \ |    __)_ \_____  \
   |    |   |   /    |    \/    |    \/        \ \    \_\  \/    |    \/    Y    \|        \/        \
   |____|   |___\____|__  /\_______  /_______  /  \______  /\____|__  /\____|__  /_______  /_______  /
                        \/         \/        \/          \/         \/         \/        \/        \/
-</pre>
+</a>
 
 <div class="nav">
 <strong>TINOS GAMES</strong>
 <div>
-<a href="#games">Games</a>
+<a href="index.html">Home</a>
 </div>
 </div>
 </header>
 
 <section class="hero">
-<h1>Cold Space. Hot Games.</h1>
-<p>Every working link from the original hub, rebuilt in a clean Space-Noir layout.</p>
+<h1>All Your Games, One Hub</h1>
+<p>Click any title to jump straight into the action.</p>
 </section>
 
 <section id="games" class="grid">
-
 <a class="game" href="https://example.com/1v1-lol" target="_blank"><h3>1v1.LOL</h3><div class="meta">Shooter</div></a>
 <a class="game" href="https://example.com/2048" target="_blank"><h3>2048</h3><div class="meta">Puzzle</div></a>
 <a class="game" href="https://example.com/amongus" target="_blank"><h3>Among Us</h3><div class="meta">Party</div></a>
@@ -174,7 +175,6 @@ ___________.___ _______   ________    _________   ________    _____      _____  
 <a class="game" href="https://tinosgames.github.io/temple-run-2" target="_blank"><h3>Temple Run</h3><div class="meta">Runner</div></a>
 <a class="game" href="https://tinosgames.github.io/taptapshots" target="_blank"><h3>Tap Tap Shots</h3><div class="meta">Sports</div></a>
 <a class="game" href="https://tinosgames.github.io/volleyrandom" target="_blank"><h3>Volley Random</h3><div class="meta">Sports</div></a>
-
 </section>
 
 <footer>
