@@ -1,283 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Welcome to Tino's Games - the best website for unblocked games! Discover, play, and enjoy.">
-    <meta name="keywords" content="Games, Unblocked Games, Free Games, Online Games, Tino's Games, Play Games">
-    <meta name="author" content="Tino">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Tino's Games</title>
-    <link rel="icon" type="image/x-icon" href="favicon.jpeg">
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TINOS GAMES • Space Noir</title>
 
-        body {
-            font-family: 'Arial', sans-serif;
-            color: #fff;
-            background: linear-gradient(135deg, #2c003e, #000); /* Purple gradient background */
-            line-height: 1.6;
-            min-height: 100vh;
-        }
+<style>
+:root{
+  --bg:#05070b;
+  --panel:#0b0f1a;
+  --ink:#e7ecff;
+  --muted:#8b93c7;
+  --neon:#6cf2ff;
+  --accent:#7a6cff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 600px at 70% -10%, rgba(122,108,255,.18), transparent 60%),
+    radial-gradient(900px 500px at 10% 10%, rgba(108,242,255,.18), transparent 55%),
+    linear-gradient(180deg,#02030a,#05070b 40%,#02030a);
+}
 
-        /* Header */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+.stars,.stars:after{
+  position:fixed; inset:0; content:""; pointer-events:none;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px,#fff,transparent 40%),
+    radial-gradient(1px 1px at 80px 120px,#cfe7ff,transparent 40%),
+    radial-gradient(1.5px 1.5px at 140px 90px,#fff,transparent 40%);
+  animation:drift 160s linear infinite;
+  opacity:.5;
+}
+.stars:after{animation-duration:240s;opacity:.3}
+@keyframes drift{to{transform:translateY(-1000px)}}
 
-        .logo-image {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            cursor: pointer; /* Pointer cursor to indicate it's clickable */
-        }
+header{
+  position:sticky;top:0;z-index:10;
+  backdrop-filter:blur(8px);
+  background:linear-gradient(180deg,rgba(5,7,11,.85),rgba(5,7,11,.2));
+  border-bottom:1px solid rgba(108,242,255,.15);
+}
 
-        .navbar {
-            display: flex;
-            gap: 1rem;
-        }
+.ascii{
+  padding:26px 10px;
+  text-align:center;
+  font-family:"Courier New",monospace;
+  font-size:clamp(.55rem,.9vw,.85rem);
+  line-height:1.15;
+  color:#cfe9ff;
+  white-space:pre;
+  text-shadow:0 0 6px rgba(108,242,255,.6),0 0 18px rgba(108,242,255,.35);
+}
 
-        .nav-link {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+}
+.nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+.nav a:hover{color:var(--ink)}
 
-        .nav-link:hover {
-            color: #a855f7; /* Purple hover color */
-        }
+.hero{
+  max-width:1200px;
+  margin:50px auto 50px;
+  padding:20px;
+  text-align:center;
+}
+h1{margin:0 0 10px;font-size:clamp(32px,4vw,52px)}
+p{color:var(--muted)}
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 3rem 1rem;
-            color: #fff;
-        }
+.cta-button{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 28px;
+  font-size:1.1rem;
+  font-weight:bold;
+  color:var(--ink);
+  background:var(--neon);
+  border:none;
+  border-radius:8px;
+  text-decoration:none;
+  box-shadow:0 0 15px rgba(108,242,255,.4);
+  transition:transform .2s, box-shadow .2s;
+}
+.cta-button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 25px rgba(108,242,255,.7);
+}
 
-        .hero-title {
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-        }
+.changelog-section{
+  max-width:800px;
+  margin:40px auto;
+  padding:20px;
+  background:rgba(11,15,26,.85);
+  border:1px solid rgba(122,108,255,.2);
+  border-radius:12px;
+}
+.changelog-section h2{
+  margin-top:0;
+  color:var(--neon);
+}
+.changelog-section ul{
+  list-style:none;
+  padding-left:0;
+}
+.changelog-section li{
+  margin-bottom:8px;
+  color:var(--muted);
+}
 
-        .hero-description {
-            margin: 1rem 0;
-            font-size: 1.2rem;
-        }
-
-        .cta-button {
-            background-color: #a855f7;
-            color: #fff;
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #9333ea;
-            transform: scale(1.05);
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 2rem 1rem;
-            text-align: center;
-            color: #fff;
-        }
-
-        .about-title {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .about-description {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Features Section */
-        .features-section {
-            padding: 2rem 1rem;
-            background-color: rgba(0, 0, 0, 0.8);
-            text-align: center;
-        }
-
-        .features-title {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            color: #fff;
-            padding: 0 1rem;
-        }
-
-        .feature-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 2px solid #a855f7;
-            border-radius: 10px;
-            padding: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(168, 85, 247, 0.5);
-        }
-
-        .feature-title {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-description {
-            font-size: 1rem;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-        }
-
-        /* Easter Egg Bubble Animation */
-        .bubble {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-image: url('lowtaperfade.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 50%;
-            animation: floatUp 3s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) scale(0.5);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-500px) scale(1);
-                opacity: 0;
-            }
-        }
-    </style>
+footer{
+  border-top:1px solid rgba(122,108,255,.18);
+  padding:20px;
+  text-align:center;
+  color:var(--muted);
+}
+</style>
 </head>
-<body>
 
-<header class="header">
-    <div class="logo">
-        <img src="favicon.jpeg" alt="Tino's Games Logo" class="logo-image" id="favicon">
-    </div>
-    <nav class="navbar">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="games.html" class="nav-link">Games</a>
-        <a href="https://monkey.nordparrot.ro/worksheets/search.html" class="nav-link">Proxy</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="changelog.html" class="nav-link">Changelog</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="risky-games.html" class="nav-link">Risky</a>
-        <a href="settings.html" class="nav-link">Settings</a>
-    </nav>
+<body>
+<div class="stars"></div>
+
+<header>
+<pre class="ascii">
+ _______ .___ _______   ________    _________   ________    _____      _____  ___________ _________
+ \__    \|   |\      \  \_____  \  /   _____/  /  _____/   /  _  \    /     \ \_   _____//   _____/
+   |    | |   |/   |   \  /   |   \ \_____  \  /   \  ___  /  /_\  \  /  \ /  \ |    __)_ \_____  \
+   |    | |   /    |    \/    |    \/        \ \    \_\  \/    |    \/    Y    \|        \/        \
+   |____| |___\____|__  /\_______  /_______  /  \______  /\____|__  /\____|__  /_______  /_______  /
+                        \/         \/        \/          \/         \/         \/        \/        \/
+</pre>
+
+<div class="nav">
+<strong>TINOS GAMES</strong>
+<div>
+<a href="https://tinosgames.github.io/games.html">Play Games</a>
+<a href="#changelog">Changelog</a>
+</div>
+</div>
 </header>
 
-<main>
-    <section class="hero">
-        <h1 class="hero-title">Welcome to Tino's Games!</h1>
-        <p class="hero-description">Your ultimate hub for unblocked games. Play anywhere, anytime!</p>
-        <a href="games.html" class="cta-button">Explore Games</a>
-    </section>
+<section class="hero">
+<h1>Cold Space. Hot Games.</h1>
+<p>Click the button below to enter the full Tino's Games hub.</p>
+<a class="cta-button" href="https://tinosgames.github.io/games.html">Enter Games Hub</a>
+</section>
 
-    <section class="about-section">
-        <h2 class="about-title">About Tino's Games</h2>
-        <p class="about-description">
-            At Tino's Games, we believe that everyone deserves to enjoy games without restrictions. Our platform offers a wide variety of unblocked games
-            that you can play on any device, anywhere in the world. Whether you're at school, work, or home, our games are always accessible and free to play.
-        </p>
-    </section>
+<section id="changelog" class="changelog-section">
+<h2>Changelog</h2>
+<ul>
+<li>• 2026-01-10: Added new arcade games and improved server speed.</li>
+<li>• 2026-01-05: Fixed bugs in multiplayer games.</li>
+<li>• 2026-01-01: Updated layout to Space Noir theme.</li>
+<li>• 2025-12-25: Holiday event with exclusive games.</li>
+</ul>
+</section>
 
-    <section class="features-section">
-        <h2 class="features-title">Why Choose Us?</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3 class="feature-title">Wide Game Selection</h3>
-                <p class="feature-description">From action-packed games to relaxing puzzles, we have something for everyone.</p>
-            </div>
-            <div class="feature-card">
-                <h3 class="feature-title">Unblocked and Free</h3>
-                <p class="feature-description">Our games are unblocked and 100% free to play, no hidden fees or subscriptions.</p>
-            </div>
-            <div class="feature-card">
-                <h3 class="feature-title">Accessible Anywhere</h3>
-                <p class="feature-description">Play on any device, anytime, anywhere—even in restricted environments like schools or workplaces.</p>
-            </div>
-            <div class="feature-card">
-                <h3 class="feature-title">Regular Updates</h3>
-                <p class="feature-description">We constantly add new games and features to ensure you never run out of fun.</p>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer class="footer">
-    <p>&copy; 2025 Tino's Games. All rights reserved.</p>
+<footer>
+© 2026 TINOS GAMES • Built in the dark
 </footer>
-
-<script>
-    // Select the favicon element
-    const favicon = document.getElementById('favicon');
-
-    favicon.addEventListener('click', () => {
-        // Create multiple bubble elements
-        for (let i = 0; i < 10; i++) {
-            createBubble();
-        }
-    });
-
-    function createBubble() {
-        const bubble = document.createElement('div');
-        bubble.classList.add('bubble');
-
-        // Randomize starting position and size
-        const size = Math.random() * 30 + 20; // Random size between 20px and 50px
-        bubble.style.width = `${size}px`;
-        bubble.style.height = `${size}px`;
-        bubble.style.left = `${Math.random() * window.innerWidth}px`;
-
-        // Append bubble to the body
-        document.body.appendChild(bubble);
-
-        // Remove the bubble after the animation ends
-        bubble.addEventListener('animationend', () => {
-            bubble.remove();
-        });
-    }
-</script>
 
 </body>
 </html>
